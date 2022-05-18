@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+defp time_remaining(expiration_time) do
+  Timex.diff(expiration_time, Timex.now(), :second)
+end
+]]></content>
+   <tabTrigger>exTimexTimeRemaining</tabTrigger>
+   <scope>source.elixir</scope>
+  <description>Elixir Timex - Get Time Remaining</description>
+</snippet>

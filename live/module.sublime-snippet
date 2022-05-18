@@ -1,0 +1,31 @@
+<snippet>
+	<content><![CDATA[
+defmodule ${1:NameSpace}.${2:Something}Live do
+  use ${1:NameSpace}, :live_view
+
+  def mount(_params, _session, socket) do
+    socket = assign(socket, :${3:attribute_name}, 0)
+    {:ok, socket}
+  end
+
+  def render(assigns) do
+    ~L"""
+    <div>
+      <button phx-click="up">
+        <%= @${3:attribute_name} %>
+      </button>
+    </div>
+    """
+  end
+
+  def handle_event("up", _, socket) do
+    socket = update(socket, :${3:attribute_name}, &(&1 + 10))
+    {:noreply, socket}
+  end
+
+end
+]]></content>
+   <tabTrigger>pxLiveViewModule</tabTrigger>
+	 <scope>source.elixir</scope>
+	<description>Phoenix - Live View Module Template</description>
+</snippet>

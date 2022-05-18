@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+mix credo.gen.config
+]]></content>
+    <tabTrigger>mix credo.gen.config</tabTrigger>
+	<scope>text.plain</scope>
+	<description>Elixir - Generate Credo Config File</description>
+</snippet>

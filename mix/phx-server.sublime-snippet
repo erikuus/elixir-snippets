@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+mix phx.server
+]]></content>
+    <tabTrigger>mix phx.server</tabTrigger>
+	<scope>text.plain</scope>
+	<description>Phoenix - Start Server</description>
+</snippet>

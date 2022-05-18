@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+if connected?(socket) do
+  :timer.send_interval(${1:1000}, self(), ${2::tick})
+end
+]]></content>
+   <tabTrigger>pxLiveViewModuleSendMessage</tabTrigger>
+   <scope>source.elixir</scope>
+  <description>Phoenix - Send Interval Message</description>
+</snippet>

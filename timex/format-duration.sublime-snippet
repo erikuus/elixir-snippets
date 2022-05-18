@@ -1,0 +1,12 @@
+<snippet>
+  <content><![CDATA[
+defp format_duration(time) do
+  time
+  |> Timex.Duration.from_seconds()
+  |> Timex.format_duration(:humanized)
+end
+]]></content>
+   <tabTrigger>exTimexFormatDuration</tabTrigger>
+   <scope>source.elixir</scope>
+  <description>Elixir Timex - Format Duration</description>
+</snippet>

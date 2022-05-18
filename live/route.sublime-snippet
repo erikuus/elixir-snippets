@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+live "/${1:name}", ${2:Name}Live
+]]></content>
+   <tabTrigger>pxRouterScopeLive</tabTrigger>
+	 <scope>source.elixir</scope>
+	<description>Phoenix - Live Scope for Router</description>
+</snippet>

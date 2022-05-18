@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+mix deps.get
+]]></content>
+    <tabTrigger>mix deps.get</tabTrigger>
+	<scope>text.plain</scope>
+	<description>Elixir - Add Dependency</description>
+</snippet>

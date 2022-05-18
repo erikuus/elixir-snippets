@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+{:number, "~> 1.0"}
+]]></content>
+    <tabTrigger>exsDepsNumber</tabTrigger>
+	<scope>source.elixir</scope>
+	<description>Elixir - Add Number Dependency</description>
+</snippet>
