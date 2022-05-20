@@ -25,7 +25,7 @@ defmodule ${1:NameSpace}.${2:Something}Live do
 
 end
 ]]></content>
-   <tabTrigger>pxLiveViewModule</tabTrigger>
+   <tabTrigger>pxLiViMoTemplate</tabTrigger>
 	 <scope>source.elixir</scope>
-	<description>Phoenix - Live View Module Template</description>
+	<description>- Live view module template (defmodule)</description>
 </snippet>

@@ -6,5 +6,5 @@ end
 ]]></content>
    <tabTrigger>exTimexTimeRemaining</tabTrigger>
    <scope>source.elixir</scope>
-  <description>Elixir Timex - Get Time Remaining</description>
+  <description>- Get time remaining with timex (defp)</description>
 </snippet>

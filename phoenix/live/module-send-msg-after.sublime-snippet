@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[
+@doc """
+def mount(_params, _session, socket) do
+  socket = assign(socket, time: 1000, something: "else")
+  if connected?(socket), do: send_after(socket)
+  {:ok, socket}
+end
+def handle_info(:tick, socket) do
+  socket = assign(socket, something: "different")
+  send_after(socket)
+  {:noreply, socket}
+end
+"""
+defp send_after(socket) do
+  Process.send_after(self(), ${1::tick}, socket.assigns.${2::time})
+end
+]]></content>
+   <tabTrigger>pxLiViMoSendMsgAfter</tabTrigger>
+   <scope>source.elixir</scope>
+  <description>- Send message after time (defp)</description>
+</snippet>

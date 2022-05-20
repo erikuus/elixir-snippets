@@ -4,5 +4,5 @@ mix deps.clean ${1:dep}
 ]]></content>
     <tabTrigger>mix deps.clean dep</tabTrigger>
 	<scope>text.plain</scope>
-	<description>Elixir - Delete Dependency</description>
+	<description>- Delete dependency</description>
 </snippet>

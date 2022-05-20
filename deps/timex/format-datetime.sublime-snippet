@@ -6,5 +6,5 @@ end
 ]]></content>
    <tabTrigger>exTimexFormatDateTime</tabTrigger>
    <scope>source.elixir</scope>
-  <description>Elixir Timex - Format DateTime</description>
+  <description>- Format datetime with timex (defp)</description>
 </snippet>

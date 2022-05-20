@@ -5,7 +5,7 @@ def handle_info(${1::tick}, socket) do
   {:noreply, socket}
 end
 ]]></content>
-   <tabTrigger>pxLiveViewModuleReceiveMessage</tabTrigger>
+   <tabTrigger>pxLiViMoReceiveMsg</tabTrigger>
    <scope>source.elixir</scope>
-  <description>Phoenix - Receive (Interval) Message</description>
+  <description>- Receive message (def handle_info)</description>
 </snippet>

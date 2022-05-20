@@ -8,5 +8,5 @@ end
 ]]></content>
    <tabTrigger>exTimexFormatDuration</tabTrigger>
    <scope>source.elixir</scope>
-  <description>Elixir Timex - Format Duration</description>
+  <description>- Format duration with timex (defp)</description>
 </snippet>
