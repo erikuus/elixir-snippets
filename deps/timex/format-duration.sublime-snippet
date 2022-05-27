@@ -1,7 +1,7 @@
 <snippet>
   <content><![CDATA[
-defp format_duration(time) do
-  time
+defp format_duration(seconds) do
+  seconds
   |> Timex.Duration.from_seconds()
   |> Timex.format_duration(:humanized)
 end

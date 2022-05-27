@@ -1,0 +1,14 @@
+<snippet>
+  <content><![CDATA[
+defmodule ${1:NameSpace}.${2:Something}View do
+  use ${1:NameSpace}, :view
+
+  def index(conn, _params) do
+    render(conn, "index.html")
+  end
+end
+]]></content>
+   <tabTrigger>pxViMoTemplate</tabTrigger>
+   <scope>source.elixir</scope>
+  <description>- View module template (defmodule)</description>
+</snippet>

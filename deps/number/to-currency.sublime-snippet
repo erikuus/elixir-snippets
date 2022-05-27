@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+Number.Currency.number_to_currency(1234567890.50, unit: "€", separator: ",", delimiter: "", format: "%n %u")
+]]></content>
+   <tabTrigger>exNumberToCurrency</tabTrigger>
+   <scope>source.elixir</scope>
+  <description>- Convert number</description>
+</snippet>
