@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+mix new something
+]]></content>
+    <tabTrigger>mix new something</tabTrigger>
+	<scope>text.plain</scope>
+	<description>- Create new project</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+%{${1:key}: ${2:value}}
+]]></content>
+   <tabTrigger>exMapAtom</tabTrigger>
+	 <scope>source.elixir</scope>
+	<description>- Map with atom key</description>
+</snippet>
