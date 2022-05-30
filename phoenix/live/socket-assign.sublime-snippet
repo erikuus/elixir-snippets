@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+socket = assign(socket, ${1:key1}: ${2:val1}, ${3:key2}: ${4:val2})
+]]></content>
+   <tabTrigger>pxLiViMoSoAssign</tabTrigger>
+   <scope>source.elixir</scope>
+  <description>- Assign socket (assign)</description>
+</snippet>

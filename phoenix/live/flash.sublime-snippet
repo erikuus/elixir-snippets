@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+put_flash(${1::info}, "${2:Message}")
+]]></content>
+   <tabTrigger>pxLiViMoFlash</tabTrigger>
+	 <scope>source.elixir</scope>
+	<description>- Live view module flash (put_flash)</description>
+</snippet>
