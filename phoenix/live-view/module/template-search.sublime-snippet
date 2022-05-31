@@ -1,0 +1,98 @@
+<snippet>
+	<content><![CDATA[
+defmodule ${1:NameSpace}.${2:Search}Live do
+  use ${1:NameSpace}, :live_view
+
+  alias ${3:NameSpace.Data}
+
+  def mount(_params, _session, socket) do
+    socket =
+      assign(
+        socket,
+        query: nil,
+        results: [],
+        loading: false
+      )
+
+    {:ok, socket}
+  end
+
+  def render(assigns) do
+    ~L"""
+    <h1>Find</h1>
+    <form phx-submit="start-search">
+      <input
+        type="text"
+        name="query"
+        autofocus
+        autocomplete="off"
+        placeholder="Query"
+        value="<%= @query %>"
+        <%= if @loading, do: "readonly" %>
+      />
+      <button>
+        <img src="images/search.svg">
+      </button>
+    </form>
+    <%= if @loading do %>
+    <div class="loader">
+      Loading ...
+    </div>
+    <% end %>
+    <div class="results">
+     <ul>
+       <%= for result <- @results do %>
+         <li>
+           <%= result.name %>
+         </li>
+       <% end %>
+     </ul>
+    </div>
+    """
+  end
+
+  def handle_event("start-search", %{"query" => query}, socket) do
+    send(self(), {:find_results, query})
+
+    socket =
+      assign(
+        socket,
+        query: nil,
+        results: [],
+        loading: true
+      )
+
+    {:noreply, socket}
+  end
+
+  def handle_info({:find_results, query}, socket) do
+    case Data.find(query) do
+      [] ->
+        socket =
+          socket
+          |> put_flash(:info, "No results for \"#{query}\"")
+          |> assign(
+            results: [],
+            loading: false
+          )
+
+        {:noreply, socket}
+
+      results ->
+        socket =
+          socket
+          |> clear_flash()
+          |> assign(
+            results: results,
+            loading: false
+          )
+
+        {:noreply, socket}
+    end
+  end
+end
+]]></content>
+   <tabTrigger>pxLiViMoTplSearch</tabTrigger>
+	 <scope>source.elixir</scope>
+	<description>- Live view search module template (defmodule)</description>
+</snippet>

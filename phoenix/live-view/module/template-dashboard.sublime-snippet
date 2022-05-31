@@ -1,0 +1,60 @@
+<snippet>
+	<content><![CDATA[
+defmodule ${1:NameSpace}.${2:SomeDashboard}Live do
+  use ${1:NameSpace}, :live_view
+
+  alias ${3:NameSpace.Data}
+
+  def mount(_params, _session, socket) do
+    if connected?(socket) do
+      :timer.send_interval(1000, self(), :tick)
+    end
+
+    socket = assign_stats(socket)
+
+    {:ok, socket}
+  end
+
+  def render(assigns) do
+    ~L"""
+    <h1>Dashboard</h1>
+    <div id="dashboard">
+      <div class="stats">
+        <%= @users %>
+      </div>
+      <div class="stat">
+        <%= @orders %>
+      </div>
+      <div class="stat">
+        <%= @amount%>
+      </div>
+      <button phx-click="refresh">
+        <img src="images/refresh.svg">
+      </button>
+    </div>
+    """
+  end
+
+  def handle_event("refresh", _, socket) do
+    socket = assign_stats(socket)
+    {:noreply, socket}
+  end
+
+  def handle_info(:tick, socket) do
+    socket = assign_stats(socket)
+    {:noreply, socket}
+  end
+
+  defp assign_stats(socket) do
+    assign(socket,
+      users: Data.users(),
+      orders: Data.orders(),
+      amount: Data.amount()
+    )
+  end
+end
+]]></content>
+   <tabTrigger>pxLiViMoTpl</tabTrigger>
+	 <scope>source.elixir</scope>
+	<description>- Live view dashboard module template (defmodule)</description>
+</snippet>
