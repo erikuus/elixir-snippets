@@ -8,7 +8,7 @@ defmodule ${1:NameSpace}.${2:Something}Controller do
   end
 end
 ]]></content>
-   <tabTrigger>pxCoMoTemplate</tabTrigger>
+   <tabTrigger>pxCoMoTpl</tabTrigger>
 	 <scope>source.elixir</scope>
 	<description>- Controller module template (defmodule)</description>
 </snippet>
