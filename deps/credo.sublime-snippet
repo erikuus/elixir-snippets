@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+{:credo, "~> 1.6", only: [:dev, :test], runtime: false}
+]]></content>
+    <tabTrigger>exDepsCredo</tabTrigger>
+	<scope>source.elixir</scope>
+	<description>- Add :credo dependency</description>
+</snippet>

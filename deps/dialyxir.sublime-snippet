@@ -1,0 +1,9 @@
+
+<snippet>
+	<content><![CDATA[
+{:dialyxir, "~> 1.0", only: [:dev], runtime: false}, # add also into project: dialyzer: [plt_add_deps: :transitive]
+]]></content>
+    <tabTrigger>exDepsDialyxir</tabTrigger>
+	<scope>source.elixir</scope>
+	<description>- Add :dialyxir dependency</description>
+</snippet>
