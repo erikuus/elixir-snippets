@@ -25,7 +25,7 @@ defmodule ${1:NameSpace}.${2:Something}Live do
 
 end
 ]]></content>
-   <tabTrigger>pxLiViMoTpl</tabTrigger>
+   <tabTrigger>pxLiViMoTe</tabTrigger>
 	 <scope>source.elixir</scope>
 	<description>- Live view module template (defmodule)</description>
 </snippet>

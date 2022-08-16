@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+mix run priv/repo/seeds.exs
+]]></content>
+    <tabTrigger>mix run priv/repo/seeds.exs</tabTrigger>
+	<scope>text.plain</scope>
+	<description>- Populate the database</description>
+</snippet>

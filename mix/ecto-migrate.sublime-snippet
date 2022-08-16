@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+mix ecto.migrate
+]]></content>
+    <tabTrigger>mix ecto.migrate</tabTrigger>
+	<scope>text.plain</scope>
+	<description>- Run generated migrations</description>
+</snippet>

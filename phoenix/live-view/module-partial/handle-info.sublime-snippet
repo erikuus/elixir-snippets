@@ -1,0 +1,11 @@
+<snippet>
+  <content><![CDATA[
+def handle_info(:${1:tick}, socket) do
+  socket = assign(socket, ${2:key}: ${3:val})
+  {:noreply, socket}
+end
+]]></content>
+   <tabTrigger>pxLiViMoHaInfo</tabTrigger>
+   <scope>source.elixir</scope>
+  <description>- Handle info (def)</description>
+</snippet>

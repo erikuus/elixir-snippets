@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+mix phx.gen.context ThingsModule ThingEcto tbl_thing column1:sring column2:string column3:string
+]]></content>
+    <tabTrigger>mix phx.gen.context ThingsModule ThingEcto tbl_thing column1:sring column2:string column3:string</tabTrigger>
+	<scope>text.plain</scope>
+	<description>- Generate database context</description>
+</snippet>

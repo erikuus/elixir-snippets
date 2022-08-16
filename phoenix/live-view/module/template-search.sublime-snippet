@@ -3,7 +3,7 @@
 defmodule ${1:NameSpace}.${2:Search}Live do
   use ${1:NameSpace}, :live_view
 
-  alias ${3:NameSpace.Data}
+  alias ${3:NameSpace}.${4:Data}
 
   def mount(_params, _session, socket) do
     socket =
@@ -66,7 +66,7 @@ defmodule ${1:NameSpace}.${2:Search}Live do
   end
 
   def handle_info({:find_results, query}, socket) do
-    case Data.find(query) do
+    case ${4:Data}.find(query) do
       [] ->
         socket =
           socket
@@ -92,7 +92,7 @@ defmodule ${1:NameSpace}.${2:Search}Live do
   end
 end
 ]]></content>
-   <tabTrigger>pxLiViMoTplSearch</tabTrigger>
+   <tabTrigger>pxLiViMoTeSearch</tabTrigger>
 	 <scope>source.elixir</scope>
 	<description>- Live view search module template (defmodule)</description>
 </snippet>

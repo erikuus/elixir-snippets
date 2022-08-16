@@ -1,0 +1,47 @@
+<snippet>
+	<content><![CDATA[
+defmodule ${1:NameSpace}.${2:Search}Live do
+  use ${1:NameSpace}, :live_view
+
+  alias ${3:NameSpace}.${4:Data}
+
+  def mount(_params, _session, socket) do
+    socket =
+      assign(socket,
+        query: "",
+        matches: [],
+        loading: false
+      )
+
+    {:ok, socket}
+  end
+
+  def render(assigns) do
+    ~L"""
+    <h1>Autocomplete</h1>
+    <form phx-change="suggest">
+      <input type="text" name="query" value="<%= @query %>"
+        placeholder="Query"
+        autocomplete="off"
+        list="matches"
+        phx-debounce="1000"
+        <%= if @loading, do: "readonly" %> />
+    </form>
+    <datalist id="matches">
+      <%= for match <- @matches do %>
+        <option value="<%= match %>"><%= match %></option>
+      <% end %>
+    </datalist>
+    """
+  end
+
+  def handle_event("suggest", %{"query" => query}, socket) do
+    socket = assign(socket, matches: ${4:Data}.suggest(query))
+    {:noreply, socket}
+  end
+end
+]]></content>
+   <tabTrigger>pxLiViMoTeAutocomplete</tabTrigger>
+	 <scope>source.elixir</scope>
+	<description>- Live view autocomplete module template (defmodule)</description>
+</snippet>
