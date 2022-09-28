@@ -92,7 +92,7 @@ defmodule ${1:NameSpace}.${2:Search}Live do
   end
 end
 ]]></content>
-   <tabTrigger>pxLiViMoTeSearch</tabTrigger>
-	 <scope>source.elixir</scope>
+  <tabTrigger>pxLiViMoTeSearch</tabTrigger>
+	<scope>source.elixir</scope>
 	<description>- Live view search module template (defmodule)</description>
 </snippet>

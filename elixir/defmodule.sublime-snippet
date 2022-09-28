@@ -19,7 +19,7 @@ defmodule ${1:NameSpace}.${2:Something} do
   end
 end
 ]]></content>
-   <tabTrigger>exDefmodule</tabTrigger>
-	 <scope>source.elixir</scope>
+  <tabTrigger>exDefmodule</tabTrigger>
+	<scope>source.elixir</scope>
 	<description>- Module template with doc</description>
 </snippet>

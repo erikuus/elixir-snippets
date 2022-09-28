@@ -54,7 +54,7 @@ defmodule ${1:NameSpace}.${2:SomeDashboard}Live do
   end
 end
 ]]></content>
-   <tabTrigger>pxLiViMoTe</tabTrigger>
-	 <scope>source.elixir</scope>
+  <tabTrigger>pxLiViMoTe</tabTrigger>
+	<scope>source.elixir</scope>
 	<description>- Live view dashboard module template (defmodule)</description>
 </snippet>

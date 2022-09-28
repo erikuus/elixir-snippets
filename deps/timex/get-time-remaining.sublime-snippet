@@ -4,7 +4,7 @@ defp time_remaining(expiration_time) do
   Timex.diff(expiration_time, Timex.now(), :second)
 end
 ]]></content>
-   <tabTrigger>exTimexTimeRemaining</tabTrigger>
-   <scope>source.elixir</scope>
+  <tabTrigger>exTimexTimeRemaining</tabTrigger>
+  <scope>source.elixir</scope>
   <description>- Get time remaining with timex (defp)</description>
 </snippet>

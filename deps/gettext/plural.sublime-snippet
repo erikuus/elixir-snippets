@@ -2,7 +2,7 @@
   <content><![CDATA[
 <%= ngettext("${1:ticket}", "${1:ticket}s", @${1:ticket}s) %>
 ]]></content>
-   <tabTrigger>exGettextPlural</tabTrigger>
-   <scope>source.elixir</scope>
+  <tabTrigger>exGettextPlural</tabTrigger>
+  <scope>source.elixir</scope>
   <description>- Display singular or plural text</description>
 </snippet>

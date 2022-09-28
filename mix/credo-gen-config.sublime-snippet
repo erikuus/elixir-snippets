@@ -1,8 +1,8 @@
 <snippet>
-	<content><![CDATA[
+  <content><![CDATA[
 mix credo.gen.config
 ]]></content>
-    <tabTrigger>mix credo.gen.config</tabTrigger>
-	<scope>text.plain</scope>
-	<description>- Generate credo config file</description>
+  <tabTrigger>mix credo.gen.config</tabTrigger>
+  <scope>text.plain</scope>
+  <description>- Generate credo config file</description>
 </snippet>

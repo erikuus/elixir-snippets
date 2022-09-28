@@ -5,7 +5,7 @@ def handle_event("${1:event-name}", %{"${2:param}"=>${3:var}}, socket) do
   {:noreply, socket}
 end
 ]]></content>
-   <tabTrigger>pxLiViMoHaEvent</tabTrigger>
-   <scope>source.elixir</scope>
+  <tabTrigger>pxLiViMoHaEvent</tabTrigger>
+  <scope>source.elixir</scope>
   <description>- Handle event (def)</description>
 </snippet>

@@ -1,8 +1,8 @@
 <snippet>
-	<content><![CDATA[
+  <content><![CDATA[
 get "/${1:name}", ${2:Name}Controller, :index
 ]]></content>
-   <tabTrigger>pxRouterScopeGet</tabTrigger>
-	 <scope>source.elixir</scope>
-	<description>- Add get scope into router</description>
+  <tabTrigger>pxRouterScopeGet</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Add get scope into router</description>
 </snippet>

@@ -1,8 +1,8 @@
 <snippet>
-	<content><![CDATA[
+  <content><![CDATA[
 live "/${1:name}", ${2:Name}Live
 ]]></content>
-   <tabTrigger>pxRouterScopeLive</tabTrigger>
-	 <scope>source.elixir</scope>
-	<description>- Add live scope into router</description>
+  <tabTrigger>pxRouterScopeLive</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Add live scope into router</description>
 </snippet>

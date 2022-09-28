@@ -8,7 +8,7 @@ defmodule ${1:NameSpace}.${2:Something}View do
   end
 end
 ]]></content>
-   <tabTrigger>pxViMoTpl</tabTrigger>
-   <scope>source.elixir</scope>
+  <tabTrigger>pxViMoTpl</tabTrigger>
+  <scope>source.elixir</scope>
   <description>- View module template (defmodule)</description>
 </snippet>

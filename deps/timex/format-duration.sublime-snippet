@@ -6,7 +6,7 @@ defp format_duration(seconds) do
   |> Timex.format_duration(:humanized)
 end
 ]]></content>
-   <tabTrigger>exTimexFormatDuration</tabTrigger>
-   <scope>source.elixir</scope>
+  <tabTrigger>exTimexFormatDuration</tabTrigger>
+  <scope>source.elixir</scope>
   <description>- Format duration with timex (defp)</description>
 </snippet>

@@ -1,8 +1,8 @@
 <snippet>
-	<content><![CDATA[
+  <content><![CDATA[
 <%= live_render(@conn, ${1:NameSpace}.${2:Something}Live) %>
 ]]></content>
-   <tabTrigger>pxLiViMoRender</tabTrigger>
-	 <scope>text.html.elixir</scope>
-	<description>- Live view module render (live_render)</description>
+  <tabTrigger>pxLiViMoRender</tabTrigger>
+  <scope>text.html.elixir</scope>
+  <description>- Live view module render (live_render)</description>
 </snippet>

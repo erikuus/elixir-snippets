@@ -1,8 +1,8 @@
 <snippet>
-	<content><![CDATA[
+  <content><![CDATA[
 {:timex, "~> 3.0"} # add also into extra_applications: [:timex]
 ]]></content>
-    <tabTrigger>exDepsTimex</tabTrigger>
-	<scope>source.elixir</scope>
-	<description>- Add :timex dependency</description>
+  <tabTrigger>exDepsTimex</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Add :timex dependency</description>
 </snippet>

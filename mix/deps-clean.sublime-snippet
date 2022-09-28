@@ -1,8 +1,8 @@
 <snippet>
-	<content><![CDATA[
+  <content><![CDATA[
 mix deps.clean ${1:dep}
 ]]></content>
-    <tabTrigger>mix deps.clean dep</tabTrigger>
-	<scope>text.plain</scope>
-	<description>- Delete dependency</description>
+  <tabTrigger>mix deps.clean dep</tabTrigger>
+  <scope>text.plain</scope>
+  <description>- Delete dependency</description>
 </snippet>

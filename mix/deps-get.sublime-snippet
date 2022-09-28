@@ -1,8 +1,8 @@
 <snippet>
-	<content><![CDATA[
+  <content><![CDATA[
 mix deps.get
 ]]></content>
-    <tabTrigger>mix deps.get</tabTrigger>
-	<scope>text.plain</scope>
-	<description>- Add dependency</description>
+  <tabTrigger>mix deps.get</tabTrigger>
+  <scope>text.plain</scope>
+  <description>- Add dependency</description>
 </snippet>

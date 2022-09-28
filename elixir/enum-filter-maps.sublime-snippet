@@ -1,10 +1,10 @@
 <snippet>
-	<content><![CDATA[
+  <content><![CDATA[
 [%{firstname: "undo", lastname: "uus"}, %{firstname: "erik", lastname: "uus"}]
 |> Enum.filter(&(&1.firstname == "erik"))
 # %{firstname: "erik", lastname: "uus"}
 ]]></content>
-   <tabTrigger>exEnumFilterMaps</tabTrigger>
-	 <scope>source.elixir</scope>
-	<description>- Get map from list by key</description>
+  <tabTrigger>exEnumFilterMaps</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Get map from list by key</description>
 </snippet>

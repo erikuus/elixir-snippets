@@ -1,8 +1,8 @@
 <snippet>
-	<content><![CDATA[
+  <content><![CDATA[
 {:gettext, "~> 0.11"}
 ]]></content>
-    <tabTrigger>exDepsGetText</tabTrigger>
-	<scope>source.elixir</scope>
-	<description>- Add :gettext dependency</description>
+  <tabTrigger>exDepsGetText</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Add :gettext dependency</description>
 </snippet>
