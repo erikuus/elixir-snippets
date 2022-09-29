@@ -1,0 +1,20 @@
+<snippet>
+  <content><![CDATA[
+# Usage inside template:
+# <%= for type <- ["a", "b", "c"] do %>
+# <%= type_checkbox(type: type, checked: type in @types) %>
+# <%= end %>
+defp ${1:type}_checkbox(assigns) do
+  assigns = Enum.into(assigns, %{})
+  ~L"""
+  <input type="checkbox"
+    id="cb<%= @${1:type} %>" name="${2:types}[]" value="<%= @${1:type} %>"
+    <%= if @checked, do: "checked" %>
+  ><label for="cb<%= @${1:type} %>"><%= @${1:type} %></label>
+  """
+end
+]]></content>
+  <tabTrigger>pxCheckboxRender</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Define function to render checkbox</description>
+</snippet>

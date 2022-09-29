@@ -1,0 +1,72 @@
+<snippet>
+  <content><![CDATA[
+defmodule ${1:NameSpace}.${2:Filter}Live do
+  use ${1:NameSpace}, :live_view
+
+  alias ${3:NameSpace}.${4:Data}
+
+  def mount(_params, _session, socket) do
+    socket =
+      assign(socket,
+        ${5:data}: ${4:Data}.list(),
+        ${6:type}: "",
+        ${7:prices}: []
+      )
+
+    {:ok, socket, temporary_assigns: [results: []]}
+  end
+
+  def render(assigns) do
+    ~L"""
+      <h1>Filter</h1>
+      <form phx-change="filter">
+        <select name="type">
+          <%= options_for_select(${6:type}_options(), @type) %>
+        </select>
+        <input type="hidden" name="${7:prices}[]" value="">
+        <%= for ${8:price} <- ["$", "$$", "$$$"] do %>
+          <%= price_checkbox(${8:price}: ${8:price}, checked: ${8:price} in @${7:prices}) %>
+        <% end %>
+      </form>
+      <div class="results">
+        <%= for ${8:item} <- @${5:data} do %>
+          <%= ${8:item}.name %>
+          <%= ${8:item}.price %>
+          <%= ${8:item}.type %>
+        <% end %>
+      </div>
+    """
+  end
+
+  def handle_event("filter", %{"${6:type}" => ${6:type}, "${7:prices}" => ${7:prices}}, socket) do
+    params = [${6:type}: ${6:type}, ${7:prices}: ${7:prices}]
+    ${5:data} = ${4:Data}.list(params)
+    socket = assign(socket, [${5:data}: ${5:data}] ++ params)
+
+    {:noreply, socket}
+  end
+
+  defp ${6:type}_options do
+    [
+      "- All -": "",
+      "Alfa": "a",
+      "Beta": "b"
+    ]
+  end
+
+  defp ${8:price}_checkbox(assigns) do
+    assigns = Enum.into(assigns, %{})
+
+    ~L"""
+    <input type="checkbox"
+      id="cb<%= @${8:price} %>" name="${7:prices}[]" value="<%= @${8:price} %>"
+      <%= if @checked, do: "checked" %>
+    ><label for="cb<%= @${8:price} %>"><%= @${8:price} %></label>
+    """
+  end
+end
+]]></content>
+  <tabTrigger>pxLiViMoTeFilter</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Live view filter module template (defmodule)</description>
+</snippet>

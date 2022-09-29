@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[
+# Usage inside template:
+# <%= options_for_select(x_options(), @x) %>
+defp ${1:type}_options do
+  [
+    "- All -": "",
+    "${2:label}": "${3:value}",
+    "${4:label}": "${5:value}",
+    "${6:label}": "${7:value}"
+  ]
+end
+]]></content>
+  <tabTrigger>pxOptionsForSelect</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Define options for select</description>
+</snippet>
