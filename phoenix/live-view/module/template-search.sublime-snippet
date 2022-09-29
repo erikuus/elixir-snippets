@@ -40,13 +40,9 @@ defmodule ${1:NameSpace}.${2:Search}Live do
     </div>
     <% end %>
     <div class="results">
-     <ul>
-       <%= for result <- @results do %>
-         <li>
-           <%= result.name %>
-         </li>
-       <% end %>
-     </ul>
+      <%= for result <- @results do %>
+        <%= result.name %>
+      <% end %>
     </div>
     """
   end
@@ -93,6 +89,6 @@ defmodule ${1:NameSpace}.${2:Search}Live do
 end
 ]]></content>
   <tabTrigger>pxLiViMoTeSearch</tabTrigger>
-	<scope>source.elixir</scope>
-	<description>- Live view search module template (defmodule)</description>
+  <scope>source.elixir</scope>
+  <description>- Live view search module template (defmodule)</description>
 </snippet>
