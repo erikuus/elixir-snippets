@@ -1,0 +1,11 @@
+<snippet>
+  <content><![CDATA[
+def handle_params(%{"${1:param}"=>${2:var}}, ${4:url}, socket) do
+  socket = assign(socket, ${4:key}: ${5:val})
+  {:noreply, socket}
+end
+]]></content>
+  <tabTrigger>pxLiViMoHaParams</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Handle params (def)</description>
+</snippet>
