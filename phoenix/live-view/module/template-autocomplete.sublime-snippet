@@ -1,9 +1,9 @@
 <snippet>
 	<content><![CDATA[
-defmodule ${1:NameSpace}.${2:Search}Live do
-  use ${1:NameSpace}, :live_view
+defmodule ${1:NameSpaceWeb}.${2:Autocomplete}Live do
+  use ${1:NameSpaceWeb}, :live_view
 
-  alias ${3:NameSpace}.${4:Data}
+  alias ${3:NameSpace}.${4:Context}
 
   def mount(_params, _session, socket) do
     socket =
@@ -36,7 +36,7 @@ defmodule ${1:NameSpace}.${2:Search}Live do
   end
 
   def handle_event("suggest", %{"query" => query}, socket) do
-    socket = assign(socket, matches: ${4:Data}.suggest(query))
+    socket = assign(socket, matches: ${4:Context}.suggest(query))
     {:noreply, socket}
   end
 end

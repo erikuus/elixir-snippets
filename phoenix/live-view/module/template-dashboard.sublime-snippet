@@ -1,9 +1,9 @@
 <snippet>
 	<content><![CDATA[
-defmodule ${1:NameSpace}.${2:SomeDashboard}Live do
-  use ${1:NameSpace}, :live_view
+defmodule ${1:NameSpaceWeb}.${2:Dashboard}Live do
+  use ${1:NameSpaceWeb}, :live_view
 
-  alias ${3:NameSpace.Data}
+  alias ${3:NameSpace.Context}
 
   def mount(_params, _session, socket) do
     if connected?(socket) do
@@ -47,9 +47,9 @@ defmodule ${1:NameSpace}.${2:SomeDashboard}Live do
 
   defp assign_stats(socket) do
     assign(socket,
-      users: Data.users(),
-      orders: Data.orders(),
-      amount: Data.amount()
+      users: Context.users(),
+      orders: Context.orders(),
+      amount: Context.amount()
     )
   end
 end

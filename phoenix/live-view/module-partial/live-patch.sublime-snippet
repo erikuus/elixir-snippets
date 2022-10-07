@@ -1,8 +1,8 @@
 <snippet>
   <content><![CDATA[
-live_patch ${1:label}, to: ${2:live_path}, class: ${2:class_name}
+live_patch ${1:label}, to: pxLiViMoLivePath, class: ${2:class_name}
 ]]></content>
   <tabTrigger>pxLiViMoLivePatch</tabTrigger>
   <scope>source.elixir</scope>
-  <description>- Display live navigation link</description>
+  <description>- Display live link</description>
 </snippet>

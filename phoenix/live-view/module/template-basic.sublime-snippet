@@ -1,7 +1,7 @@
 <snippet>
 	<content><![CDATA[
-defmodule ${1:NameSpace}.${2:Something}Live do
-  use ${1:NameSpace}, :live_view
+defmodule ${1:NameSpaceWeb}.${2:Something}Live do
+  use ${1:NameSpaceWeb}, :live_view
 
   def mount(_params, _session, socket) do
     socket = assign(socket, :${3:attribute_name}, 0)

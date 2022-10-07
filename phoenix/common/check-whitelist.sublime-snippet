@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[
+@${1:param}_whitelist = ~w({2:item1} {3:item2} {4:item3})
+
+@${1:param} =
+  params
+  |> check_whitelist("${5:key}", @${1:param}_whitelist)
+  |> String.to_${6:atom}()
+
+defp check_whitelist(params, key, whitelist) do
+  value = params[key]
+  if value in whitelist, do: value, else: hd(whitelist)
+end
+]]></content>
+  <tabTrigger>pxParamToInteger</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Define and validate against whitelist (def)</description>
+</snippet>

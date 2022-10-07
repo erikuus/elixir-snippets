@@ -1,9 +1,9 @@
 <snippet>
 	<content><![CDATA[
-defmodule ${1:NameSpace}.${2:Search}Live do
-  use ${1:NameSpace}, :live_view
+defmodule ${1:NameSpaceWeb}.${2:Search}Live do
+  use ${1:NameSpaceWeb}, :live_view
 
-  alias ${3:NameSpace}.${4:Data}
+  alias ${3:NameSpace}.${4:Context}
 
   def mount(_params, _session, socket) do
     socket =
@@ -62,7 +62,7 @@ defmodule ${1:NameSpace}.${2:Search}Live do
   end
 
   def handle_info({:find_results, query}, socket) do
-    case ${4:Data}.find(query) do
+    case ${4:Context}.find(query) do
       [] ->
         socket =
           socket

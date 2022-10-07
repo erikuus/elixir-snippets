@@ -1,0 +1,29 @@
+<snippet>
+  <content><![CDATA[
+@doc """
+Returns the value if integer othewise default value.
+
+## Examples of Integer.parse
+
+  iex> Integer.parse("34")
+  {34, ""}
+
+  iex> Integer.parse("34.5")
+  {34, ".5"}
+
+  iex> Integer.parse("three")
+  :error
+"""
+defp to_integer(nil, default_value), do: default_value
+
+defp to_integer(value, default_value) do
+  case Integer.parse(value) do
+    {i, _} -> i
+    :error -> default_value
+  end
+end
+]]></content>
+  <tabTrigger>pxParamToInteger</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Make any value to integer (def)</description>
+</snippet>

@@ -1,9 +1,15 @@
 <snippet>
   <content><![CDATA[
-# Usage inside template:
-# <%= for type <- ["a", "b", "c"] do %>
-# <%= type_checkbox(type: type, checked: type in @types) %>
-# <%= end %>
+@doc """
+Renders checkbox element.
+
+Example of use inside main template:
+
+  <%= for type <- ["a", "b", "c"] do %>
+  <%= type_checkbox(type: type, checked: type in @checked_types) %>
+  <%= end %>
+end
+"""
 defp ${1:type}_checkbox(assigns) do
   assigns = Enum.into(assigns, %{})
   ~L"""
