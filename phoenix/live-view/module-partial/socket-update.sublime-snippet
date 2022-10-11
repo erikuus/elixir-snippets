@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+socket = update(socket, :${1:attribute_name}, &(&1 + 10))
+]]></content>
+  <tabTrigger>pxlvSocketUpdate</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Update socket (without fn)</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+submit "${1:Save}", phx_disable_with: "${2:Saving ...}"
+]]></content>
+  <tabTrigger>pxlvFormButtonSubmit</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Form submit button</description>
+</snippet>
