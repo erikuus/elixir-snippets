@@ -22,7 +22,6 @@ defmodule ${1:NameSpaceWeb}.${2:Something}Live do
     socket = update(socket, :${3:attribute_name}, &(&1 + 10))
     {:noreply, socket}
   end
-
 end
 ]]></content>
   <tabTrigger>pxlvModuleBasic</tabTrigger>
