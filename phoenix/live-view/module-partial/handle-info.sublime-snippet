@@ -5,7 +5,7 @@ def handle_info(:${1:tick}, socket) do
   {:noreply, socket}
 end
 ]]></content>
-  <tabTrigger>pxLiViMoHaInfo</tabTrigger>
+  <tabTrigger>pxlvHandleInfo</tabTrigger>
   <scope>source.elixir</scope>
   <description>- Handle info (def)</description>
 </snippet>

@@ -4,7 +4,7 @@ if connected?(socket) do
   :timer.send_interval(${1:1000}, self(), ${2::tick})
 end
 ]]></content>
-  <tabTrigger>pxLiViMoMsSendInterval</tabTrigger>
+  <tabTrigger>pxlvSendInterval</tabTrigger>
   <scope>source.elixir</scope>
   <description>- Send message in interval (if)</description>
 </snippet>

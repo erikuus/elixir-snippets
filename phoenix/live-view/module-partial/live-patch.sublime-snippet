@@ -2,7 +2,7 @@
   <content><![CDATA[
 live_patch ${1:label}, to: pxLiViMoLivePath, class: ${2:class_name}
 ]]></content>
-  <tabTrigger>pxLiViMoLivePatch</tabTrigger>
+  <tabTrigger>pxlvLivePatch</tabTrigger>
   <scope>source.elixir</scope>
   <description>- Display live link</description>
 </snippet>

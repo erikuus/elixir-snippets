@@ -41,7 +41,7 @@ defmodule ${1:NameSpaceWeb}.${2:Autocomplete}Live do
   end
 end
 ]]></content>
-  <tabTrigger>pxLiViMoTeAutocomplete</tabTrigger>
+  <tabTrigger>pxlvModuleAutocomplete</tabTrigger>
 	<scope>source.elixir</scope>
 	<description>- Live view autocomplete module template (defmodule)</description>
 </snippet>

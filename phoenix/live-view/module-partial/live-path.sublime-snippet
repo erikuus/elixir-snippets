@@ -2,7 +2,7 @@
   <content><![CDATA[
 Routes.live_path(@socket, __MODULE__, ${1:param}: ${2:value})
 ]]></content>
-  <tabTrigger>pxLiViMoLivePath</tabTrigger>
+  <tabTrigger>pxlvLivePath</tabTrigger>
   <scope>source.elixir</scope>
   <description>- Get path of the live view</description>
 </snippet>
