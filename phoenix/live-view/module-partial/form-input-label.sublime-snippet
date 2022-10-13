@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+label f, :${1:field}
+]]></content>
+  <tabTrigger>pxlvFormInputLabel</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Form input label</description>
+</snippet>

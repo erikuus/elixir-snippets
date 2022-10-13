@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+|> validate_inclusion(:${1:name}, ["${2:one}", "${3:two}"])
+]]></content>
+  <tabTrigger>pxValidateInclusion</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Validate inclusion in schema</description>
+</snippet>

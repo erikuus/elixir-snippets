@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+live "/${1:name}/${2:action}", ${3:Name}Live, :${2:action}
+]]></content>
+  <tabTrigger>pxRouterScopeLiveAction</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Add live scope with action into router</description>
+</snippet>

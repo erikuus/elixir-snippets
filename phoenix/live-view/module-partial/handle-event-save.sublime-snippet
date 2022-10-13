@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[
+def handle_event("${1:save}", %{"${2:schema}"=>params}, socket) do
+  case ${3:Context}.create_${2:schema}(params) do
+    {:ok, ${2:schema_name}} ->
+      socket = update(socket, :${2:schema}s, &[${2:schema} | &1])
+
+      changeset = ${3:Context}.change_${2:schema}(%${4:Schema}{})
+      socket = assign(socket, changeset: changeset)
+
+      {:noreply, socket}
+
+    {:error, %Ecto.Changeset{} = changeset} ->
+      socket = assign(socket, changeset: changeset)
+      {:noreply, socket}
+  end
+end
+]]></content>
+  <tabTrigger>pxlvHandleEventSave</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Handle save event (def)</description>
+</snippet>

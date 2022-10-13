@@ -1,0 +1,75 @@
+<snippet>
+	<content><![CDATA[
+defmodule ${1:NameSpaceWeb}.${2:Navigation}Live do
+  use ${1:NameSpaceWeb}, :live_view
+
+  alias ${3:NameSpace}.${4:Context}
+
+  def mount(_params, _session, socket) do
+    ${5:struct}s = ${4:Context}.list_${5:struct}s()
+
+    socket =
+      assign(socket,
+        ${5:struct}s: ${5:struct}s,
+        selected_${5:struct}: hd(${5:struct}s)
+      )
+
+    {:ok, socket}
+  end
+
+  def handle_params(%{"id" => id}, _url, socket) do
+    id = String.to_integer(id)
+
+    ${5:struct} = ${4:Context}.get_${5:struct}!(id)
+
+    socket =
+      assign(socket,
+        selected_${5:struct}: ${5:struct},
+        page_title: "View #{${5:struct}.name}"
+      )
+
+    {:noreply, socket}
+  end
+
+  def handle_params(_, _url, socket) do
+    {:noreply, socket}
+  end
+
+  def render(assigns) do
+    ~L"""
+    <h1>Servers</h1>
+    <nav>
+      <%= for ${5:struct} <- @${5:struct}s do %>
+        <div>
+          <%= live_patch link_body(${5:struct}),
+                to: Routes.live_path(
+                          @socket,
+                          __MODULE__,
+                          id: ${5:struct}.id
+                    ),
+                class: if ${5:struct} == @selected_${5:struct}, do: "active" %>
+        </div>
+      <% end %>
+    </nav>
+    <main>
+      <h2><%= @selected_${5:struct}.name %></h2>
+      <div><%= @selected_${5:struct}.type %></div>
+    </main>
+    """
+  end
+
+  defp link_body(${5:struct}) do
+    assigns = %{name: ${5:struct}.name}
+
+    ~L"""
+    <img src="/images/${5:struct}.svg">
+    <%= @name %>
+    """
+  end
+end
+
+]]></content>
+  <tabTrigger>pxlvModuleNavigation</tabTrigger>
+	<scope>source.elixir</scope>
+	<description>- Live view navigation module template (defmodule)</description>
+</snippet>

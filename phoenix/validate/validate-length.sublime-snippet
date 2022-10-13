@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+|> validate_length(:${1:name}, min: ${2:2}, max: ${3:100})
+]]></content>
+  <tabTrigger>pxValidateLength</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Validate string length in schema</description>
+</snippet>

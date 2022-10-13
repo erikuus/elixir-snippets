@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+|> validate_number(:${1:name}, greater_than: ${2:0})
+]]></content>
+  <tabTrigger>pxValidateNumber</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Validate number in schema</description>
+</snippet>
