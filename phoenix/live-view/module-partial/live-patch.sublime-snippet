@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-live_patch ${1:label}, to: pxLiViMoLivePath, class: ${2:class_name}
+live_patch ${1:label}, to: pxlvLivePath, class: ${2:class_name}
 ]]></content>
   <tabTrigger>pxlvLivePatch</tabTrigger>
   <scope>source.elixir</scope>

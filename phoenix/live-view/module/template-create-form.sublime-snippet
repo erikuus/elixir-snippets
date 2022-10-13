@@ -24,13 +24,21 @@ defmodule ${1:NameSpaceWeb}.${2:Form}Live do
     ~L"""
       <h1>Create form/h1>
       <div id="checkin">
-        <%= f = form_for @changeset, "#", phx_submit: "save"%>
+        <%= f = form_for @changeset, "#",
+          phx_submit: "save",
+          phx_change: "validate" %>
           <div class="field">
-            <%= text_input f, :name, placeholder: "Name", autocomplete: "off" %>
+            <%= text_input f, :name,
+              placeholder: "Name",
+              autocomplete: "off",
+              phx_debounce: 2000 %>
             <%= error_tag f, :name %>
           </div>
           <div class="field">
-            <%= telephone_input f, :phone, placeholder: "Phone", autocomplete: "off" %>
+            <%= telephone_input f, :phone,
+              placeholder: "Phone",
+              autocomplete: "off",
+              phx_debounce: "blur" %>
             <%= error_tag f, :phone %>
           </div>
           <div class="field">
@@ -58,7 +66,7 @@ defmodule ${1:NameSpaceWeb}.${2:Form}Live do
       {:ok, {6:struct}} ->
         socket = update(socket, :${6:struct}s, &[${6:struct} | &1])
 
-        changeset = Volunteers.change_${6:struct}(%{4:Schema}{})
+        changeset = ${4:Context}.change_${6:struct}(%{4:Schema}{})
         socket = assign(socket, changeset: changeset)
 
         :timer.sleep(500)
@@ -68,6 +76,17 @@ defmodule ${1:NameSpaceWeb}.${2:Form}Live do
         socket = assign(socket, changeset: changeset)
         {:noreply, socket}
     end
+  end
+
+  def handle_event("validate", %{"${6:struct}" => params}, socket) do
+    changeset =
+      %{4:Schema}{}
+      |> ${4:Context}.change_${6:struct}(params)
+      |> Map.put(:action, :insert)
+
+    socket = assign(socket, changeset: changeset)
+
+    {:noreply, socket}
   end
 end
 ]]></content>

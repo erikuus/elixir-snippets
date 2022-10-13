@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-socket = push_patch(socket, to: pxLiViMoLivePath)
+socket = push_patch(socket, to: pxlvLivePath)
 ]]></content>
   <tabTrigger>pxlvPushPatch</tabTrigger>
   <scope>source.elixir</scope>
