@@ -1,8 +1,0 @@
-<snippet>
-  <content><![CDATA[
-%{"${1:key}" => ${2:value}}
-]]></content>
-  <tabTrigger>exMapString</tabTrigger>
-  <scope>source.elixir</scope>
-  <description>- Map with string key</description>
-</snippet>
