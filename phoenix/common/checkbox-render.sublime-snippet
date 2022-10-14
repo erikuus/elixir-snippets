@@ -22,5 +22,5 @@ end
 ]]></content>
   <tabTrigger>pxCheckboxRender</tabTrigger>
   <scope>source.elixir</scope>
-  <description>- Define function to render checkbox</description>
+  <description>- Define function to render checkbox (defp)</description>
 </snippet>

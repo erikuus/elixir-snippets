@@ -2,7 +2,7 @@
   <content><![CDATA[
 @${1:param}_whitelist = ~w({2:item1} {3:item2} {4:item3})
 
-@${1:param} =
+${1:param} =
   params
   |> check_whitelist("${5:key}", @${1:param}_whitelist)
   |> String.to_${6:atom}()
