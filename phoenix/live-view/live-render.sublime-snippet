@@ -2,7 +2,7 @@
   <content><![CDATA[
 <%= live_render(@conn, ${1:NameSpace}.${2:Something}Live) %>
 ]]></content>
-  <tabTrigger>pxlvMoRender</tabTrigger>
+  <tabTrigger>pxlvLiveRender</tabTrigger>
   <scope>text.html.elixir</scope>
   <description>- Live view module render (live_render)</description>
 </snippet>
