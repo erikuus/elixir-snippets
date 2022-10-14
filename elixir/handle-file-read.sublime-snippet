@@ -1,0 +1,33 @@
+<snippet>
+	<content><![CDATA[
+defmodule ${1:NameSpace}.${2:FileHandler} do
+  @moduledoc """
+  This module handles file reading results.
+
+  Example of usage:
+
+    def read_file(filename) do
+      Path.expand("./files")
+      |> Path.join(filename <> ".html")
+      |> File.read()
+      |> ${1:NameSpace}.${2:FileHandler}.handle_read_result()
+    end
+  """
+
+  def handle_read_result({:ok, file_contents}) do
+    file_contents
+  end
+
+  def handle_read_result({:error, :enoent}) do
+    "File not found!"
+  end
+
+  def handle_read_result({:error, reason}) do
+    "Reading file failed: #{reason}!"
+  end
+end
+]]></content>
+  <tabTrigger>exHandleFileRead</tabTrigger>
+	<scope>source.elixir</scope>
+	<description>- Handle file read result</description>
+</snippet>
