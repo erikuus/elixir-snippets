@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[
+def broadcast({:ok, ${1:struct}}, event) do
+  Phoenix.PubSub.broadcast(${3:NameSpace}.PubSub,
+    @topic,
+    {event, ${1:struct}}
+  )
+
+  {:ok, ${1:struct}}
+end
+
+def broadcast({:error, _reason} = error), do: error
+]]></content>
+  <tabTrigger>pxlvBroadcast</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Broadcast message for live updates (def)</description>
+</snippet>

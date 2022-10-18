@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[
+def handle_event("${1:toggle}", %{"${2:id}"=>${2:id}}, socket) do
+    ${3:struct} = ${4:Context}.get_${3:struct}!(${2:id})
+
+    {:ok, _} =
+      ${4:Context}.update_${3:struct}(${3:struct}, %{
+        {5:state}: !${3:struct}.{5:state}
+      })
+
+    ${3:struct}s = ${4:Context}.list_${3:struct}s()
+
+    socket =
+      assign(socket,
+        ${3:struct}s: ${3:struct}s
+      )
+
+    {:noreply, socket}
+  end
+end
+]]></content>
+  <tabTrigger>pxlvHandleEventToggle</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Handle toggle event (def)</description>
+</snippet>
