@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-live_component(${1:Some}Component, ${2:key}: "${3:value}")
+live_component(${1:Some}Component, ${2:key}: ${3:value})
 ]]></content>
   <tabTrigger>pxlvRenderComponent</tabTrigger>
   <scope>source.elixir</scope>
