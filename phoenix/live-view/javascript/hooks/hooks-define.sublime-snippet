@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+letHooks={${1:Something}: ${1:Something}, ${2:SomethingElse}: ${2:SomethingElse}};
+]]></content>
+  <tabTrigger>pxlvHooksImport</tabTrigger>
+  <scope>source.js</scope>
+  <description>- Define separate hooks in app.js</description>
+</snippet>

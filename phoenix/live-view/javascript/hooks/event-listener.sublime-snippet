@@ -1,0 +1,14 @@
+<snippet>
+  <content><![CDATA[
+Hooks.UpperCase = { // or const UpperCase if in separate file
+  mounted() {
+    this.el.addEventListener("input", e => {
+      this.el.value = this.el.value.toUpperCase();
+    });
+  }
+};
+]]></content>
+  <tabTrigger>pxlvEventListener</tabTrigger>
+  <scope>source.js</scope>
+  <description>- EventListener hook</description>
+</snippet>

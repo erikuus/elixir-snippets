@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[
+// cd assets
+// npm install flatpickr
+// import flatpickr from "flatpickr";
+
+Hooks.DatePick = { // or const DatePick if in separate file
+  mounted() {
+    flatpickr(this.el, {
+      enableTime: false,
+      dateFormat: "F d, Y",
+      onChange: this.handleDatePicked.bind(this)
+    });
+  },
+  handleDatePicked(selectedDates, dateStr, instance) {
+    this.pushEvent("select-date", dateStr);
+  }
+};
+]]></content>
+  <tabTrigger>pxlvDatepicker</tabTrigger>
+  <scope>source.js</scope>
+  <description>- DatePicker hook</description>
+</snippet>

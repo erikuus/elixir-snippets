@@ -1,0 +1,12 @@
+<snippet>
+  <content><![CDATA[
+let Hooks = {}
+
+
+
+export default Hooks;
+]]></content>
+  <tabTrigger>pxlvHooksContain</tabTrigger>
+  <scope>source.js</scope>
+  <description>- Template file that contains all hooks</description>
+</snippet>

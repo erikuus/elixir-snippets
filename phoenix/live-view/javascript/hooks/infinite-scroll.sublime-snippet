@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[
+Hooks.InfiniteScroll = { // or const InfiniteScroll if in separate file
+  mounted(){
+    this.observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      if (entry.isIntersecting) {
+        this.pushEvent("load-more")
+      }
+    })
+    this.observer.observe(this.el);
+  },
+  // just an example what can be done
+  updated() {
+    const pageNumber = this.el.dataset.page;
+    console.log("Page nr ", pageNumber)
+  },
+  destroyed() {
+    this.observer.disconnect()
+  }
+};
+]]></content>
+  <tabTrigger>pxlvInfiniteScroll</tabTrigger>
+  <scope>source.js</scope>
+  <description>- Infinite Scroll hook</description>
+</snippet>

@@ -1,0 +1,27 @@
+<snippet>
+	<content><![CDATA[
+defmodule ${1:NameSpaceWeb}.${2:Something}Component do
+  use ${1:NameSpaceWeb}, :live_component
+
+  def mount(socket) do
+    {:ok, socket}
+  end
+
+  def update(assigns, socket) do
+    socket = assign(socket, assigns)
+    {:ok, socket}
+  end
+
+  def render(assigns) do
+    ~L"""
+    <div>
+        <%= @${3:attribute_name} %>
+    </div>
+    """
+  end
+end
+]]></content>
+  <tabTrigger>pxlvComponentStatelessBasic</tabTrigger>
+	<scope>source.elixir</scope>
+	<description>- Live view basic stateless component template (defmodule)</description>
+</snippet>

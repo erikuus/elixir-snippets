@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+import ${1:Hooks} from "./${2:hooks}";
+]]></content>
+  <tabTrigger>pxlvHooksImport</tabTrigger>
+  <scope>source.js</scope>
+  <description>- Import hooks into app.js</description>
+</snippet>
