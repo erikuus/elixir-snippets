@@ -1,0 +1,47 @@
+<snippet>
+	<content><![CDATA[
+defmodule ${1:NameSpaceWeb}.${2:Something}Component do
+  use ${1:NameSpaceWeb}, :live_component
+
+  def mount(socket) do
+    socket = assign(socket, name: nil)
+
+    {:ok, socket}
+  end
+
+  def update(assigns, socket) do
+    socket = assign(socket, assigns)
+
+    {:ok, socket}
+  end
+
+  def render(assigns) do
+    ~L"""
+    <form phx-change="display-name" phx-submit="send-name" phx-target="<%= @myself %>">
+      <input type="text" name="name" value="<%= @name %>" placeholder="Name">
+      <button type="submit">Send</button>
+    </form>
+    <%= if(@name) do %>
+      <p>Name is <%= @name %></p>
+    <% end %>
+    """
+  end
+
+  def handle_event("display-name", %{"name" => name}, socket) do
+    socket = assign(socket, name: name)
+
+    {:noreply, socket}
+  end
+
+  def handle_event("send-name", _, socket) do
+    send(self(), {:name, socket.assigns.name})
+
+    {:noreply, socket}
+  end
+
+end
+]]></content>
+  <tabTrigger>pxlvComponentBasicStateful</tabTrigger>
+	<scope>source.elixir</scope>
+	<description>- Live view basic stateful component template (defmodule)</description>
+</snippet>
