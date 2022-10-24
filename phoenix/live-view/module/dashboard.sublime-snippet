@@ -3,7 +3,7 @@
 defmodule ${1:NameSpaceWeb}.${2:Dashboard}Live do
   use ${1:NameSpaceWeb}, :live_view
 
-  alias ${3:NameSpace.Context}
+  alias ${3:NameSpace}.${4:Context}
 
   def mount(_params, _session, socket) do
     if connected?(socket) do
@@ -47,9 +47,9 @@ defmodule ${1:NameSpaceWeb}.${2:Dashboard}Live do
 
   defp assign_stats(socket) do
     assign(socket,
-      users: Context.users(),
-      orders: Context.orders(),
-      amount: Context.amount()
+      users: ${4:Context}.users(),
+      orders: ${4:Context}.orders(),
+      amount: ${4:Context}.amount()
     )
   end
 end

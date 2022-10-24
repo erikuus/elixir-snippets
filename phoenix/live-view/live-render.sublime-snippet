@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-<%= live_render(@conn, ${1:NameSpace}.${2:Something}Live) %>
+live_render(@conn, ${1:NameSpace}.${2:Something}Live)
 ]]></content>
   <tabTrigger>pxlvLiveRender</tabTrigger>
   <scope>text.html.elixir</scope>

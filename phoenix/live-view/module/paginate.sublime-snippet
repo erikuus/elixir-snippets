@@ -18,18 +18,18 @@ defmodule ${1:NameSpaceWeb}.${2:Paginate}Live do
     paginate_options = %{page: page, per_page: per_page}
     sort_options = %{sort_by: sort_by, sort_order: sort_order}
 
-    ${5:data} =
-      ${4:Context}.list_{5:data}(
+    ${5:struct}s =
+      ${4:Context}.list_{5:struct}s(
         paginate: paginate_options,
         sort: sort_options
       )
-    count_${5:data} = ${4:Context}.count_${5:data}()
+    count_${5:struct}s = ${4:Context}.count_${5:struct}s()
 
     socket =
       assign(socket,
         options: Map.merge(paginate_options, sort_options),
-        ${5:data}: ${5:data},
-        count_${5:data}: count_${5:data}
+        ${5:struct}s: ${5:struct}s,
+        count_${5:struct}s: count_${5:struct}s
       )
 
     {:noreply, socket}
@@ -46,16 +46,16 @@ defmodule ${1:NameSpaceWeb}.${2:Paginate}Live do
         <label for="per_page">per page</label>
       </form>
       <table>
-          <%= for ${6:item} <- @${5:data} do %>
+          <%= for ${5:struct} <- @${5:struct}s do %>
           <tr>
             <td>
-              <%= sort_link(@socket, ${6:item}.column1, :column1, @options) %>
+              <%= sort_link(@socket, ${5:struct}.column1, :column1, @options) %>
             </td>
             <td>
-              <%= sort_link(@socket, ${6:item}.column2, :column2, @options) %>
+              <%= sort_link(@socket, ${5:struct}.column2, :column2, @options) %>
             </td>
             <td>
-              <%= sort_link(@socket, ${6:item}.column3, :column3, @options) %>
+              <%= sort_link(@socket, ${5:struct}.column3, :column3, @options) %>
             </td>
           </tr>
           <% end %>
@@ -65,11 +65,11 @@ defmodule ${1:NameSpaceWeb}.${2:Paginate}Live do
           <%= navigation_link(@socket, "Prev", @options.page - 1, @options, "previous") %>
         <% end %>
         <%= for i <- (@options.page - 2)..(@options.page + 2), i > 0 do %>
-          <%= if i <= ceil(@count_${5:data} / @options.per_page) do %>
+          <%= if i <= ceil(@count_${5:struct}s / @options.per_page) do %>
             <%= navigation_link(@socket, i, i, @options, (if @options.page == i, do: "active")) %>
           <% end %>
         <% end %>
-        <%= if(@options.page * @options.per_page < @count_${5:data}) do %>
+        <%= if(@options.page * @options.per_page < @count_${5:struct}s) do %>
           <%= navigation_link(@socket, "Next", @options.page + 1, @options, "next") %>
         <% end %>
       </div>
