@@ -21,7 +21,7 @@ defmodule ${1:NameSpaceWeb}.${2:Something}Component do
   end
 end
 ]]></content>
-  <tabTrigger>pxlvComponentStatelessBasic</tabTrigger>
+  <tabTrigger>pxlvComponentBasicStateless</tabTrigger>
 	<scope>source.elixir</scope>
 	<description>- Live view basic stateless component template (defmodule)</description>
 </snippet>
