@@ -1,0 +1,12 @@
+<snippet>
+  <content><![CDATA[
+test "${1:this works}", %{conn: conn} do
+  {:ok, view, html} = live(conn, "${2:/}")
+  assert html =~ "${3:Something}"
+  assert render(view) =~ "${4:Something}"
+end
+]]></content>
+  <tabTrigger>pxlvTestCaseBasic</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Live view basic test case template (defmodule)</description>
+</snippet>

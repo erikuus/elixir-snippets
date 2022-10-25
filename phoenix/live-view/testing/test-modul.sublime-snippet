@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[
+defmodule ${1:NameSpaceWeb}.${2:Something}Test do
+  use ${1:NameSpaceWeb}.ConnCase, async: ${3:true}
+
+  import Phoenix.LiveViewTest
+
+  test "${4:initial render}", %{conn: conn} do
+    {:ok, view, html} = live(conn, "/${5:}")
+    assert html =~ "${6:Something}"
+    assert render(view) =~ "${6:Something}"
+  end
+end
+]]></content>
+  <tabTrigger>pxlvTestModuleBasic</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Live view basic test module template (defmodule)</description>
+</snippet>
