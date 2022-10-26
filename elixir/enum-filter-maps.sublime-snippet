@@ -1,8 +1,8 @@
 <snippet>
   <content><![CDATA[
+# results %{firstname: "erik", lastname: "uus"}
 [%{firstname: "undo", lastname: "uus"}, %{firstname: "erik", lastname: "uus"}]
 |> Enum.filter(&(&1.firstname == "erik"))
-# %{firstname: "erik", lastname: "uus"}
 ]]></content>
   <tabTrigger>exEnumFilterMaps</tabTrigger>
   <scope>source.elixir</scope>

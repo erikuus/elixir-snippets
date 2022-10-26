@@ -29,5 +29,5 @@ end
 ]]></content>
   <tabTrigger>exHandleFileRead</tabTrigger>
 	<scope>source.elixir</scope>
-	<description>- Handle file read result</description>
+	<description>- Handle file read result (defmodule)</description>
 </snippet>
