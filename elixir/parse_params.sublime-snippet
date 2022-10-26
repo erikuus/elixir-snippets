@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+# results %{"name" => "Erik", "sex" => "Male"}    
+"name=Erik&sex=Male" |> String.trim |> URI.decode_query
+]]></content>
+  <tabTrigger>exParseParamsString</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Parse params string to map</description>
+</snippet>
