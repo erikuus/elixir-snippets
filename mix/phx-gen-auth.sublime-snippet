@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+mix phx.gen.auth Accounts User users
+]]></content>
+  <tabTrigger>mix phx.gen.auth Accounts User users</tabTrigger>
+  <scope>text.plain</scope>
+  <description>- Generate authentication system</description>
+</snippet>

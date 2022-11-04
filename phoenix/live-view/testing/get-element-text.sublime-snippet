@@ -1,0 +1,13 @@
+<snippet>
+  <content><![CDATA[
+defp get_element_text(html, selector) do
+  html
+  |> Floki.parse_document!()
+  |> Floki.find(selector)
+  |> Floki.text()
+end
+]]></content>
+  <tabTrigger>pxlvTestGetElementText</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Live view get element text for test case (defp)</description>
+</snippet>

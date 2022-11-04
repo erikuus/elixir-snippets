@@ -1,0 +1,13 @@
+<snippet>
+  <content><![CDATA[
+${1:something} =
+  view
+  |> render()
+  |> get_element_text("${2:selector}")
+
+assert ${1:something} =~ ${3:something_else}
+]]></content>
+  <tabTrigger>pxlvTestAssertElementText</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Live view assert element text</description>
+</snippet>

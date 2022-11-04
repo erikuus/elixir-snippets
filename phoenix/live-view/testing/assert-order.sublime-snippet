@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+assert render(view) =~ ~r/${1:item1}.*${2:item2}.*${3:item3}.*/s
+]]></content>
+  <tabTrigger>pxlvTestAssertExistOrder</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Live view assert items exist in given order</description>
+</snippet>
+
+

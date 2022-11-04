@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+defp get_number_of_matches(haystack, needle) do
+  haystack |> :binary.matches(needle) |> length()
+end
+]]></content>
+  <tabTrigger>pxlvTestGetNumberOfMatches</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Live view get number of matches for test case (defp)</description>
+</snippet>

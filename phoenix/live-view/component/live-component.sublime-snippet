@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+live_component(${1:Some}Component, ${2:key}: ${3:value})
+]]></content>
+  <tabTrigger>pxlvRenderComponentLive</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Render component in live view</description>
+</snippet>

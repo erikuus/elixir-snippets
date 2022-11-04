@@ -13,7 +13,7 @@ def handle_info(:tick, socket) do
 end
 """
 defp send_after(socket) do
-  Process.send_after(self(), ${1::tick}, socket.assigns.${2::time})
+  Process.send_after(self(), ${1::tick}, socket.assigns.${2:time})
 end
 ]]></content>
   <tabTrigger>pxlvMsSendAfter</tabTrigger>

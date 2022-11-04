@@ -1,8 +1,8 @@
 <snippet>
   <content><![CDATA[
-live_component(${1:Some}Component, ${2:key}: ${3:value})
+render_component(${1:Some}Component, ${2:key}: ${3:value})
 ]]></content>
   <tabTrigger>pxlvRenderComponent</tabTrigger>
   <scope>source.elixir</scope>
-  <description>- Render live component</description>
+  <description>- Render component</description>
 </snippet>

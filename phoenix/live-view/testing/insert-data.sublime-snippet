@@ -1,0 +1,15 @@
+<snippet>
+  <content><![CDATA[
+defp create_${1:data}(attributes) do
+  {:ok, ${1:data}} =
+    attributes
+    |> Enum.into(%{${2:}})
+    |> ${3:NameSpace}.${4:Context}.create_${1:data}()
+
+  ${1:data}
+end
+]]></content>
+  <tabTrigger>pxlvTestInsertData</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Live view insert data for test case (defp)</description>
+</snippet>

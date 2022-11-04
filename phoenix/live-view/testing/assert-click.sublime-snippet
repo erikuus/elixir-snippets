@@ -1,8 +1,0 @@
-<snippet>
-  <content><![CDATA[
-assert view |> element("${1:tag}", "${2:content}") |> render_click() =~ "${3:Something}"
-]]></content>
-  <tabTrigger>pxlvTestAssertClick</tabTrigger>
-  <scope>source.elixir</scope>
-  <description>- Live view assert click in test case</description>
-</snippet>

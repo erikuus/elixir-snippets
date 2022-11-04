@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+view
+|> form("${1:selector}", %{"${2:key}" => ${3:value}})
+|> render_change()
+]]></content>
+  <tabTrigger>pxlvTestRenderChange</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Live view render form change in test case</description>
+</snippet>

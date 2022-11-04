@@ -5,11 +5,8 @@ defmodule ${1:NameSpaceWeb}.${2:Something}Test do
 
   import Phoenix.LiveViewTest
 
-  test "${4:initial render}", %{conn: conn} do
-    {:ok, view, html} = live(conn, "/${5:}")
-    assert html =~ "${6:Something}"
-    assert render(view) =~ "${6:Something}"
-  end
+  ${4:}
+
 end
 ]]></content>
   <tabTrigger>pxlvTestModuleBasic</tabTrigger>
