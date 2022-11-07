@@ -1,8 +1,8 @@
 <snippet>
   <content><![CDATA[
-mix phx.gen.auth Accounts User users
+mix phx.gen.auth Accounts User users --hashing-lib=pbkdf2
 ]]></content>
-  <tabTrigger>mix phx.gen.auth Accounts User users</tabTrigger>
+  <tabTrigger>mix phx.gen.auth Accounts User users --hashing-lib=pbkdf2</tabTrigger>
   <scope>text.plain</scope>
   <description>- Generate authentication system</description>
 </snippet>
