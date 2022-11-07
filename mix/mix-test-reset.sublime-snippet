@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+set MIX_ENV=test&&mix ecto.reset
+]]></content>
+  <tabTrigger>set MIX_ENV=test&&mix ecto.reset</tabTrigger>
+  <scope>text.plain</scope>
+  <description>- Reset test database (windows)</description>
+</snippet>

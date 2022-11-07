@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+mix deps.clean --unlock --unused
+]]></content>
+  <tabTrigger>mix deps.clean --unlock --unused</tabTrigger>
+  <scope>text.plain</scope>
+  <description>- Delete unused dependencies</description>
+</snippet>
