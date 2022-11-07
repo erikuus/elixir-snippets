@@ -1,0 +1,54 @@
+<snippet>
+  <content><![CDATA[
+defmodule ${1:NameSpaceWeb}.LiveHelpers do
+  @moduledoc """
+  Enables live views to access current user in session.
+
+  This can be used in your live views as:
+
+    import ${1:NameSpaceWeb}.LiveHelpers
+
+    def mount(_params, session, socket) do
+      {:ok, assign_current_user(session, socket)}
+    end
+
+    def render(assigns) do
+      ~L"""
+      <%= @current_user.id %>
+      """
+    end
+
+  If you need this for multiple live views import it
+  inside live view entrypoint as:
+
+    def live_view do
+      quote do
+        use Phoenix.LiveView,
+          layout: {${1:NameSpaceWeb}.LayoutView, "live.html"}
+
+        import ${1:NameSpaceWeb}.LiveHelpers
+
+        unquote(view_helpers())
+      end
+    end
+  """
+
+  import Phoenix.LiveView
+
+  alias ${2:NameSpace}.Accounts
+
+  def assign_current_user(session, socket) do
+    assign_new(
+      socket,
+      :current_user,
+      fn ->
+        Accounts.get_user_by_session_token(session["user_token"])
+      end
+    )
+  end
+end
+]]></content>
+  <tabTrigger>pxlvModuleHelper</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Live view helper module template (defmodule)</description>
+</snippet>

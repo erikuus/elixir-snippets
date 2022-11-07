@@ -8,5 +8,5 @@ end
 ]]></content>
   <tabTrigger>pxlvTestCaseBasic</tabTrigger>
   <scope>source.elixir</scope>
-  <description>- Live view basic test case template (defmodule)</description>
+  <description>- Live view basic test case template (def)</description>
 </snippet>

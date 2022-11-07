@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[
+test "renders restricted page if user is logged in", %{conn: conn} do
+  user = ${1:NameSpace}.AccountsFixtures.user_fixture()
+
+  {:ok, view, _html} =
+    conn
+    |> log_in_user(user)
+    |> live("/${2:}")
+
+  assert render(view) =~ "${3:Something}"
+end
+
+test "redirects to login page if user is not logged in", %{conn: conn} do
+  assert {:error, {:redirect, %{to: "/users/log_in"}}} = live(conn, "/${2:}")
+end
+]]></content>
+  <tabTrigger>pxlvTestCaseLogin</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Live view test login (def)</description>
+</snippet>
