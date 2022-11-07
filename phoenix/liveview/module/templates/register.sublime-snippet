@@ -1,0 +1,83 @@
+<snippet>
+	<content><![CDATA[
+defmodule ${1:NameSpaceWeb}.RegisterLive do
+  use ${1:NameSpaceWeb}, :live_view
+
+  alias ${2:NameSpace}.Accounts
+  alias ${2:NameSpace}.Accounts.User
+
+  def mount(_params, _session, socket) do
+    changeset = Accounts.change_user_registration(%User{})
+
+    socket =
+      assign(socket,
+        changeset: changeset,
+        trigger_action: false
+      )
+
+    {:ok, socket}
+  end
+
+  def render(assigns) do
+    ~L"""
+    <h1>Live Register</h1>
+    <%= f = form_for @changeset, Routes.user_registration_path(@socket, :create),
+      phx_change: "validate",
+      phx_submit: "save",
+      phx_trigger_action: @trigger_action
+       %>
+
+      <%= label f, :email %>
+      <%= email_input f, :email, required: true %>
+      <%= error_tag f, :email %>
+
+      <%= label f, :password %>
+      <%= password_input f, :password, required: true, value: input_value(f, :password) %>
+      <%= error_tag f, :password %>
+
+      <div>
+        <%= submit "Register", phx_disable_with: "Saving..." %>
+      </div>
+    </form>
+
+    <p>
+      <%= link "Log in", to: Routes.user_session_path(@socket, :new) %> |
+      <%= link "Forgot your password?", to: Routes.user_reset_password_path(@socket, :new) %>
+    </p>
+    """
+  end
+
+  def handle_event("save", %{"user" => params}, socket) do
+    changeset = get_registration_changeset(params)
+
+    socket =
+      assign(socket,
+        changeset: changeset,
+        trigger_action: changeset.valid?
+      )
+
+    {:noreply, socket}
+  end
+
+  def handle_event("validate", %{"user" => params}, socket) do
+    changeset = get_registration_changeset(params)
+
+    socket =
+      assign(socket,
+        changeset: changeset
+      )
+
+    {:noreply, socket}
+  end
+
+  defp get_registration_changeset(params) do
+    %User{}
+    |> Accounts.change_user_registration(params)
+    |> Map.put(:action, :insert)
+  end
+end
+]]></content>
+  <tabTrigger>pxlvModuleRegister</tabTrigger>
+	<scope>source.elixir</scope>
+	<description>- Live view register module template (defmodule)</description>
+</snippet>
