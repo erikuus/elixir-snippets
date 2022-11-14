@@ -1,0 +1,11 @@
+<snippet>
+  <content><![CDATA[
+// in live view: push_event(socket, "${1:do-it}", ${2:value})
+this.handleEvent("${1:do-it}", ${2:value} => {
+  {3:}
+})
+]]></content>
+  <tabTrigger>pxlvHookHandleEvent</tabTrigger>
+  <scope>source.js</scope>
+  <description>- handle event in hook</description>
+</snippet>
