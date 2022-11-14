@@ -20,7 +20,7 @@ Hooks.InfiniteScroll = { // or const InfiniteScroll if in separate file
   }
 };
 ]]></content>
-  <tabTrigger>pxlvInfiniteScroll</tabTrigger>
+  <tabTrigger>pxlvHookInfiniteScroll</tabTrigger>
   <scope>source.js</scope>
-  <description>- Infinite Scroll hook</description>
+  <description>- Infinite Scroll hook template</description>
 </snippet>

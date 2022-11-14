@@ -17,7 +17,7 @@ Hooks.DatePick = { // or const DatePick if in separate file
   }
 };
 ]]></content>
-  <tabTrigger>pxlvDatepicker</tabTrigger>
+  <tabTrigger>pxlvHookTplDatepicker</tabTrigger>
   <scope>source.js</scope>
-  <description>- DatePicker hook</description>
+  <description>- DatePicker hook template</description>
 </snippet>
