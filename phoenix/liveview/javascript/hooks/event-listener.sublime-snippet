@@ -8,7 +8,7 @@ Hooks.UpperCase = { // or const UpperCase if in separate file
   }
 };
 ]]></content>
-  <tabTrigger>pxlvEventListener</tabTrigger>
+  <tabTrigger>pxlvHookEventListener</tabTrigger>
   <scope>source.js</scope>
-  <description>- EventListener hook</description>
+  <description>- listen event in hook</description>
 </snippet>
