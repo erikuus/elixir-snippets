@@ -1,7 +1,18 @@
 <snippet>
   <content><![CDATA[
-// in live view: push_event(socket, "${1:do-it}", ${2:value})
-this.handleEvent("${1:do-it}", ${2:value} => {
+/*
+def handle_event("select-item", %{"id" => id}, socket) do
+  item = find_item(socket, String.to_integer(id))
+
+  socket =
+    socket
+    |> assign(selected_item: item)
+    |> push_event("${1:do-something}", item)
+
+  {:noreply, socket}
+end
+*/    
+this.handleEvent("${1:do-something}", ${2:item} => {
   {3:}
 })
 ]]></content>
