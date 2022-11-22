@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+cancel_upload(socket, :${1:photo}, ref)
+]]></content>
+  <tabTrigger>pxlvLiveUploadCancel</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Cancel live file upload</description>
+</snippet>

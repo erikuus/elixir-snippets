@@ -1,0 +1,95 @@
+<snippet>
+	<content><![CDATA[
+defmodule ${1:NameSpaceWeb}.${2:Map}Live do
+  use ${1:NameSpaceWeb}, :live_view
+
+  alias ${3:NameSpace}.${4:Context}
+
+  def mount(_params, _session, socket) do
+    if connected?(socket), do: ${4:Context}.subscribe()
+
+    socket =
+      assign(socket,
+        ${5:item}s: ${4:Context}.list_${5:item}s(),
+        selected_${5:item}: nil
+      )
+
+    {:ok, socket}
+  end
+
+  def render(assigns) do
+    ~L"""
+    <h1>Map</h1>
+    <div id="mapping">
+      <div class="sidebar">
+        <%= for ${5:item} <- @${5:item}s do %>
+          <div class="${5:item}
+                <%= if @selected_${5:item} == ${5:item}, do: 'selected' %>"
+              phx-click="select-${5:item}"
+              phx-value-id="<%= ${5:item}.id %>">
+            <%= ${5:item}.description %>
+          </div>
+        <% end %>
+      </div>
+      <div class="main">
+        <div id="wrapper" phx-update="ignore">
+          <div id="map"
+              phx-hook="IncidentMap">
+          </div>
+        </div>
+        <div class="text-center">
+          <button phx-click="report-${5:item}">
+            Report Incident
+          </button>
+        </div>
+      </div>
+    </div>
+    """
+  end
+
+  def handle_event("select-${5:item}", %{"id" => id}, socket) do
+    ${5:item} = find_${5:item}(socket, String.to_integer(id))
+
+    socket =
+      socket
+      |> assign(selected_${5:item}: ${5:item})
+      |> push_event("highlight-marker", ${5:item})
+
+    {:noreply, socket}
+  end
+
+  def handle_event("get-${5:item}s", _, socket) do
+    {:reply, %{${5:item}s: socket.assigns.${5:item}s}, socket}
+  end
+
+  def handle_event("report-${5:item}", _, socket) do
+    ${4:Context}.create_random_${5:item}()
+
+    {:noreply, socket}
+  end
+
+  def handle_event("marker-clicked", ${5:item}_id, socket) do
+    ${5:item} = find_${5:item}(socket, ${5:item}_id)
+
+    {:reply, %{${5:item}: ${5:item}}, assign(socket, selected_${5:item}: ${5:item})}
+  end
+
+  def handle_info({:${5:item}_created, ${5:item}}, socket) do
+    socket =
+      socket
+      |> update(:${5:item}s, fn ${5:item}s -> [${5:item} | ${5:item}s] end)
+      |> assign(selected_${5:item}: ${5:item})
+      |> push_event("add-marker", ${5:item})
+
+    {:noreply, socket}
+  end
+
+  defp find_${5:item}(socket, id) do
+    Enum.find(socket.assigns.${5:item}s, &(&1.id == id))
+  end
+end
+]]></content>
+  <tabTrigger>pxlvModuleMap</tabTrigger>
+	<scope>source.elixir</scope>
+	<description>- Live view map module template (defmodule)</description>
+</snippet>

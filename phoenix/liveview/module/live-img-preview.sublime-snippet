@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+for entry <- @uploads.photo.entries do %>
+  <%= live_img_preview entry %>
+<% end
+]]></content>
+  <tabTrigger>pxlvLiveImagePreview</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Display live image preview</description>
+</snippet>

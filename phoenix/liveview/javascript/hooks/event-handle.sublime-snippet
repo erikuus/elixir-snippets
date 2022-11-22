@@ -11,7 +11,7 @@ def handle_event("select-item", %{"id" => id}, socket) do
 
   {:noreply, socket}
 end
-*/    
+*/
 this.handleEvent("${1:do-something}", ${2:item} => {
   {3:}
 })

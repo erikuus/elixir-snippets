@@ -1,0 +1,13 @@
+<snippet>
+  <content><![CDATA[
+# <input phx-keyup="${1:do-something}" phx-key="${1:Enter}" />
+def handle_event("${1:do-something}", %{"key" => "${1:Enter}", "value" => value}, socket) do
+  ${3:}
+
+  {:noreply, socket}
+end
+]]></content>
+  <tabTrigger>pxlvHandleEventKeyInput</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Handle key event inside input field (def)</description>
+</snippet>

@@ -1,0 +1,15 @@
+<snippet>
+  <content><![CDATA[
+socket =
+  allow_upload(
+    socket,
+    :${1:photo}
+    accept: ~w(.jpg .png${2:}),
+    max_entries: ${3:3},
+    max_file_size: ${4:10_000_000}
+  )
+]]></content>
+  <tabTrigger>pxlvLiveUploadAllow</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Allow live file uploads</description>
+</snippet>

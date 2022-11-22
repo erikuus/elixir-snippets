@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[
+def handle_event("upload", %{}, socket) do
+  urls =
+    consume_uploaded_entries(socket, :photo, fn meta, entry ->
+      dest = Path.join("priv/static/uploads", filename(entry))
+      File.cp!(meta.path, dest)
+      Routes.static_path(socket, "/uploads/#{filename(entry)}")
+    end)
+
+  # do something with urls = ["path/to/photo1", "path/to/photo2"]
+
+  {:noreply, socket}
+end
+
+defp filename(entry) do
+  [ext | _] = MIME.extensions(entry.client_type)
+  "#{entry.uuid}.#{ext}"
+end
+]]></content>
+  <tabTrigger>pxlvLiveUploadConsumeEntries</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Consume live uploaded files</description>
+</snippet>

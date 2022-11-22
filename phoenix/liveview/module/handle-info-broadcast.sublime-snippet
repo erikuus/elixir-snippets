@@ -1,0 +1,22 @@
+<snippet>
+  <content><![CDATA[
+def handle_info({:${1:item}_${2:created}, ${1:item}}, socket) do
+  socket =
+    update(
+      socket,
+      :${1:item}s,
+      fn ${1:item}s -> [${1:item} | ${1:item}s] end
+    )
+
+  socket =
+    assign(socket,
+      recent_activity: "#{${1:item}.name} ${2:created}!"
+    )
+
+  {:noreply, socket}
+end
+]]></content>
+  <tabTrigger>pxlvHandleInfoBroadcast</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Handle broadcasted info (def)</description>
+</snippet>

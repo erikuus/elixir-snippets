@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+live_file_input @uploads.${1:photo}
+]]></content>
+  <tabTrigger>pxlvLiveFileInput</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Display live file input</description>
+</snippet>
