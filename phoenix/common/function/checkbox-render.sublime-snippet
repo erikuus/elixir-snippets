@@ -1,9 +1,9 @@
 <snippet>
   <content><![CDATA[
 @doc """
-Renders checkbox element.
+Renders checkbox element
 
-Example of use inside main template:
+## Example of use inside main template
 
   <%= for type <- ["a", "b", "c"] do %>
   <%= type_checkbox(type: type, checked: type in @checked_types) %>

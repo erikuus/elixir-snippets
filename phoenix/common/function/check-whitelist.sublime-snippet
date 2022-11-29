@@ -1,18 +1,22 @@
 <snippet>
   <content><![CDATA[
-@${1:param}_whitelist = ~w({2:item1} {3:item2} {4:item3})
+@doc """
+Checks param against whitelist
 
-${1:param} =
-  params
-  |> check_whitelist("${5:key}", @${1:param}_whitelist)
-  |> String.to_${6:atom}()
+## Example of usage
 
+  @permitted_sort_orders ~w(asc desc)
+
+  sort_order =
+    params
+    |> check_whitelist("sort_order", @permitted_sort_orders)
+"""
 defp check_whitelist(params, key, whitelist) do
   value = params[key]
   if value in whitelist, do: value, else: hd(whitelist)
 end
 ]]></content>
-  <tabTrigger>pxParamToInteger</tabTrigger>
+  <tabTrigger>pxValidateAgainstWhitelist</tabTrigger>
   <scope>source.elixir</scope>
   <description>- Define and validate against whitelist (def)</description>
 </snippet>
