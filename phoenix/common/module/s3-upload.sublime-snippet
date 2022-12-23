@@ -129,7 +129,7 @@ defmodule SimpleS3Upload do
   defp sha256(secret, msg), do: :crypto.mac(:hmac, :sha256, secret, msg)
 end
 ]]></content>
-  <tabTrigger>pxModuleS3upload</tabTrigger>
+  <tabTrigger>.s3-upload</tabTrigger>
   <scope>source.elixir</scope>
-  <description>- Dependency free S3 Form Upload (defmodule)</description>
+  <description>- Dependency free S3 Form Upload Module</description>
 </snippet>

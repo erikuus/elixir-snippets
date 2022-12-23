@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[
+@doc """
+Cancel entries uploaded to temporary folder
+
+## Example of usage inside render or .leex file
+
+  <%= for entry <- @uploads.photo.entries do %>
+    <%= live_img_preview entry %>
+    <%= entry.progress %>%
+    <span style="width:<%= entry.progress %>%"></span>
+    <a href="#" phx-click="cancel" phx-value-ref="<%= entry.ref %>">
+      &times;
+    </a>
+  <% end %>
+"""
+def handle_event("cancel", %{"ref" => ref}, socket) do
+  socket = cancel_upload(socket, :photo, ref)
+  {:noreply, socket}
+end
+]]></content>
+  <tabTrigger>pxlvHandleEventUploadCancel</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Handle upload cancel event (def)</description>
+</snippet>

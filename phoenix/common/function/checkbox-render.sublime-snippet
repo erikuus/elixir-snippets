@@ -3,7 +3,7 @@
 @doc """
 Renders checkbox element
 
-## Example of use inside main template
+## Example of usage inside main template
 
   <%= for type <- ["a", "b", "c"] do %>
   <%= type_checkbox(type: type, checked: type in @checked_types) %>
@@ -20,7 +20,7 @@ defp ${1:type}_checkbox(assigns) do
   """
 end
 ]]></content>
-  <tabTrigger>pxCheckboxRender</tabTrigger>
+  <tabTrigger>.checkbox-render</tabTrigger>
   <scope>source.elixir</scope>
-  <description>- Define function to render checkbox (defp)</description>
+  <description>- Render checkbox</description>
 </snippet>

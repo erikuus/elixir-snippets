@@ -1,7 +1,11 @@
 <snippet>
   <content><![CDATA[
 defmodule ${1:NameSpaceWeb}.LiveHelpers do
-  @moduledoc """
+  import Phoenix.LiveView
+
+  alias ${2:NameSpace}.Accounts
+
+  @doc """
   Enables live views to access current user in session.
 
   This can be used in your live views as:
@@ -32,11 +36,6 @@ defmodule ${1:NameSpaceWeb}.LiveHelpers do
       end
     end
   """
-
-  import Phoenix.LiveView
-
-  alias ${2:NameSpace}.Accounts
-
   def assign_current_user(session, socket) do
     assign_new(
       socket,

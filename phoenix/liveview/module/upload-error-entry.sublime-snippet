@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+for err <- upload_errors(@uploads.${1:photo}, ${2:entry}) do %>
+  <%= handle_upload_error(err) %>
+<% end
+]]></content>
+  <tabTrigger>pxlvLiveUploadErrorEntry</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Display file upload errors for given entry</description>
+</snippet>

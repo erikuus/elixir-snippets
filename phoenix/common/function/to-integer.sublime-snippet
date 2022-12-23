@@ -23,7 +23,7 @@ defp to_integer(value, default_value) do
   end
 end
 ]]></content>
-  <tabTrigger>pxParamToInteger</tabTrigger>
+  <tabTrigger>.to-integer</tabTrigger>
   <scope>source.elixir</scope>
   <description>- Make any value to integer (def)</description>
 </snippet>

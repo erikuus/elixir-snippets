@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-mix deps.clean ${1:dep}
+mix deps.clean PACKAGE_NAME
 ]]></content>
   <tabTrigger>mix deps.clean dep</tabTrigger>
   <scope>text.plain</scope>

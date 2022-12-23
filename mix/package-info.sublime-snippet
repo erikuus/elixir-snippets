@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+mix hex.info PACKAGE_NAME
+]]></content>
+  <tabTrigger>mix hex.info PACKAGE_NAME</tabTrigger>
+  <scope>text.plain</scope>
+  <description>- Get package info (versions)</description>
+</snippet>

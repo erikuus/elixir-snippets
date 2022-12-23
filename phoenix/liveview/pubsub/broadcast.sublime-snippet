@@ -11,7 +11,7 @@ end
 
 def broadcast({:error, _reason} = error), do: error
 ]]></content>
-  <tabTrigger>pxlvBroadcast</tabTrigger>
+  <tabTrigger>.broadcast</tabTrigger>
   <scope>source.elixir</scope>
   <description>- Broadcast message for live updates (def)</description>
 </snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+mix archive.install hex phx_new
+]]></content>
+  <tabTrigger>mix archive.install hex phx_new</tabTrigger>
+  <scope>text.plain</scope>
+  <description>- Install the Phoenix application generator</description>
+</snippet>

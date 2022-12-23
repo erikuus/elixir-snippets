@@ -6,7 +6,7 @@ def subscribe do
   Phoenix.PubSub.subscribe(${1:NameSpace}.PubSub, @topic)
 end
 ]]></content>
-  <tabTrigger>pxlvSubscribe</tabTrigger>
+  <tabTrigger>.subscribe</tabTrigger>
   <scope>source.elixir</scope>
   <description>- Subscribe for live updates (def)</description>
 </snippet>

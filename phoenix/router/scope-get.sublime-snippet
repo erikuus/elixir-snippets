@@ -2,7 +2,7 @@
   <content><![CDATA[
 get "/${1:name}", ${2:Name}Controller, :index
 ]]></content>
-  <tabTrigger>pxRouterScopeGet</tabTrigger>
+  <tabTrigger>.scope-get</tabTrigger>
   <scope>source.elixir</scope>
   <description>- Add get scope into router</description>
 </snippet>

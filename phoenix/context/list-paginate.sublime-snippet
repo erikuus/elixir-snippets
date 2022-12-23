@@ -10,7 +10,7 @@ def list_${1:struct}s(page: page, per_page: per_page) do
   Repo.all(query)
 end
 ]]></content>
-  <tabTrigger>pxContextListPaginate</tabTrigger>
+  <tabTrigger>.list-paginate</tabTrigger>
   <scope>source.elixir</scope>
   <description>- Make any value to integer (def)</description>
 </snippet>

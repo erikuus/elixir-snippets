@@ -1,6 +1,5 @@
 <snippet>
 	<content><![CDATA[
-defmodule ${1:NameSpaceWeb}.${2:Something}Component do
   use ${1:NameSpaceWeb}, :live_component
 
   def mount(socket) do
@@ -13,15 +12,14 @@ defmodule ${1:NameSpaceWeb}.${2:Something}Component do
   end
 
   def render(assigns) do
-    ~L"""
+    ~H"""
     <div>
         <%= @${3:attribute_name} %>
     </div>
     """
   end
-end
 ]]></content>
-  <tabTrigger>pxlvComponentBasicStateless</tabTrigger>
+  <tabTrigger>.live-component-stateless</tabTrigger>
 	<scope>source.elixir</scope>
-	<description>- Live view basic stateless component template (defmodule)</description>
+	<description>- Live view stateless component</description>
 </snippet>

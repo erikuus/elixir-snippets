@@ -16,7 +16,7 @@ defp check_whitelist(params, key, whitelist) do
   if value in whitelist, do: value, else: hd(whitelist)
 end
 ]]></content>
-  <tabTrigger>pxValidateAgainstWhitelist</tabTrigger>
+  <tabTrigger>.check-whitelist</tabTrigger>
   <scope>source.elixir</scope>
-  <description>- Define and validate against whitelist (def)</description>
+  <description>- Validate against whitelist</description>
 </snippet>

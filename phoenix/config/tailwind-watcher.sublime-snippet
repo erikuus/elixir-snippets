@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+tailwind: {Tailwind, :install_and_run, [:default, ~w(--watch)]}
+]]></content>
+  <tabTrigger>.tailwind-watcher</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Add tailwind watcher</description>
+</snippet>

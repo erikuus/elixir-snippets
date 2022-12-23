@@ -2,7 +2,7 @@
   <content><![CDATA[
 render_component(${1:Some}Component, ${2:key}: ${3:value})
 ]]></content>
-  <tabTrigger>pxlvRenderComponent</tabTrigger>
+  <tabTrigger>.render-component</tabTrigger>
   <scope>source.elixir</scope>
   <description>- Render component</description>
 </snippet>

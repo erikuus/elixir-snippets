@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+"assets.deploy": ["tailwind default --minify", "esbuild default --minify", "phx.digest"]
+]]></content>
+  <tabTrigger>exAliasTailwind</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Add alias to build tailwind CSS on deployment</description>
+</snippet>

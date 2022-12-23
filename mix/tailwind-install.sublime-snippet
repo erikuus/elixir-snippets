@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+mix tailwind.install
+]]></content>
+  <tabTrigger>mix tailwind.install</tabTrigger>
+  <scope>text.plain</scope>
+  <description>- Install tailwind</description>
+</snippet>

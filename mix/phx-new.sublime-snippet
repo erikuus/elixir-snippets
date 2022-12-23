@@ -1,8 +1,8 @@
 <snippet>
   <content><![CDATA[
-mix new something
+mix phx.new PATH --live [--module MODULE] [--app APP]
 ]]></content>
-  <tabTrigger>mix new something</tabTrigger>
+  <tabTrigger>mix phx.new PATH --live [--module MODULE] [--app APP]</tabTrigger>
   <scope>text.plain</scope>
   <description>- Create new elixir project</description>
 </snippet>

@@ -1,0 +1,12 @@
+<snippet>
+  <content><![CDATA[
+let Uploaders = {}
+
+
+
+export default Uploaders;
+]]></content>
+  <tabTrigger>pxlvUploadersContain</tabTrigger>
+  <scope>source.js</scope>
+  <description>- Template file that contains all uploaders</description>
+</snippet>

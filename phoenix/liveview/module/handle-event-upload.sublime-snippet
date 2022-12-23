@@ -8,7 +8,7 @@ def handle_event("upload", %{}, socket) do
       Routes.static_path(socket, "/uploads/#{filename(entry)}")
     end)
 
-  # do something with urls = ["path/to/photo1", "path/to/photo2"]
+  # do something with urls = ["/uploads/f1.jpg", "/uploads/f2.jpg"]
 
   {:noreply, socket}
 end
@@ -18,7 +18,7 @@ defp filename(entry) do
   "#{entry.uuid}.#{ext}"
 end
 ]]></content>
-  <tabTrigger>pxlvLiveUploadConsumeEntries</tabTrigger>
+  <tabTrigger>pxlvHandleEventUpload</tabTrigger>
   <scope>source.elixir</scope>
-  <description>- Consume live uploaded files</description>
+  <description>- Handle upload event (def)</description>
 </snippet>

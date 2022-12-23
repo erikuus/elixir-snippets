@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+def ${1:index}(conn, _params) do
+  render(conn, "${1:index}.html",
+    ${2:param1}: "",
+    ${3:param2}: ""
+  )
+end
+]]></content>
+   <tabTrigger>.action</tabTrigger>
+	 <scope>source.elixir</scope>
+	<description>- Controller action</description>
+</snippet>
