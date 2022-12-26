@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[
+def live_modal(component, opts, close_opts \\ %{capture_close: true, show_close_btn: false}) do
+    live_component(
+      $TM_NAMESPACE_WEB.Components.ModalComponent,
+      id: :modal,
+      component: component,
+      opts: opts,
+      return_to: Keyword.fetch!(opts, :return_to),
+      close_opts: close_opts
+    )
+end
+]]></content>
+  <tabTrigger>.live-modal-helper</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Render modal component</description>
+</snippet>

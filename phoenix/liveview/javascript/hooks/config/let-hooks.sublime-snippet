@@ -2,7 +2,7 @@
   <content><![CDATA[
 letHooks={${1:Something}: ${1:Something}, ${2:SomethingElse}: ${2:SomethingElse}};
 ]]></content>
-  <tabTrigger>pxlvHooksDefine</tabTrigger>
+  <tabTrigger>.let-hooks</tabTrigger>
   <scope>source.js</scope>
-  <description>- Define hooks in separate files in app.js</description>
+  <description>- Define in app.js hooks that are in separate files</description>
 </snippet>

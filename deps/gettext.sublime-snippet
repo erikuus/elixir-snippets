@@ -2,7 +2,7 @@
   <content><![CDATA[
 {:gettext, "~> 0.11"}
 ]]></content>
-  <tabTrigger>exDepsGetText</tabTrigger>
+  <tabTrigger>.deps-get-text</tabTrigger>
   <scope>source.elixir</scope>
   <description>- Add :gettext dependency</description>
 </snippet>

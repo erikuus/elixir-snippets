@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+use $TM_NAMESPACE_WEB, :view
+]]></content>
+  <tabTrigger>.use-view</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- use :view</description>
+</snippet>

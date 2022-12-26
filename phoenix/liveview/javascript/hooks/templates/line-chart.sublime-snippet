@@ -13,7 +13,7 @@ Hooks.LineChart = {
   }
 }
 ]]></content>
-  <tabTrigger>pxlvHookLineChart</tabTrigger>
+  <tabTrigger>.hook-linechart</tabTrigger>
   <scope>source.js</scope>
-  <description>- Line Chart hook template</description>
+  <description>- Line Chart hook</description>
 </snippet>

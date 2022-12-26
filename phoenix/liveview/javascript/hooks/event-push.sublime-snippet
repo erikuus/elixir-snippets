@@ -1,14 +1,8 @@
 <snippet>
   <content><![CDATA[
 this.pushEvent("${1:do-something}");
-/*
-def handle_event("${1:do-something}", _, socket) do
-
-  {:noreply, socket}
-end
-*/
 ]]></content>
-  <tabTrigger>pxlvHookPushEvent</tabTrigger>
+  <tabTrigger>.event-push</tabTrigger>
   <scope>source.js</scope>
   <description>- push event from hook</description>
 </snippet>

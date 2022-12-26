@@ -4,7 +4,7 @@
 [%{firstname: "undo", lastname: "uus"}, %{firstname: "erik", lastname: "uus"}]
 |> Enum.filter(&(&1.firstname == "erik"))
 ]]></content>
-  <tabTrigger>exEnumFilterMaps</tabTrigger>
+  <tabTrigger>.enum-filter-maps</tabTrigger>
   <scope>source.elixir</scope>
   <description>- Get map from list by key</description>
 </snippet>

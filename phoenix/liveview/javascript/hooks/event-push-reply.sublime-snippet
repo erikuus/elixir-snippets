@@ -5,13 +5,8 @@ this.pushEvent("${1:get-something}", {}, (reply, ref) => {
     this.${4:someObject}.${5:doSomething}(${3:item});
   })
 });
-/*
-def handle_event("${1:get-something}", _, socket) do
-  {:reply, %{items: socket.assigns.${2:items}}, socket}
-end
-*/
 ]]></content>
-  <tabTrigger>pxlvHookPushEventHandleReply</tabTrigger>
+  <tabTrigger>.event-push-handle-reply</tabTrigger>
   <scope>source.js</scope>
   <description>- push event from hook and handle reply</description>
 </snippet>

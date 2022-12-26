@@ -1,10 +1,10 @@
 <snippet>
   <content><![CDATA[
-defp format_datetime(datetime, format \\\\ "{0D}.{0M}.{YYYY} {h24}:{m}:{s}") do
+def format_datetime(datetime, format \\\\ "{0D}.{0M}.{YYYY} {h24}:{m}:{s}") do
   Timex.format(datetime, format)
 end
 ]]></content>
-  <tabTrigger>exTimexFormatDateTime</tabTrigger>
+  <tabTrigger>.timex-format-datetime</tabTrigger>
   <scope>source.elixir</scope>
-  <description>- Format datetime with timex (defp)</description>
+  <description>- Format datetime with timex</description>
 </snippet>

@@ -2,7 +2,7 @@
   <content><![CDATA[
 {:tailwind, "~> 0.1", runtime: Mix.env() == :dev}
 ]]></content>
-  <tabTrigger>exDepsTailwind</tabTrigger>
+  <tabTrigger>.deps-tailwind</tabTrigger>
   <scope>source.elixir</scope>
   <description>- Add :tailwind dependency</description>
 </snippet>

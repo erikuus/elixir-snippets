@@ -1,5 +1,6 @@
 <snippet>
 	<content><![CDATA[
+defmodule ${1:NameSpaceWeb}.${2:Autocomplete}Live do
   use ${1:NameSpaceWeb}, :live_component
 
   def mount(socket) do
@@ -18,8 +19,9 @@
     </div>
     """
   end
+end
 ]]></content>
   <tabTrigger>.live-component-stateless</tabTrigger>
 	<scope>source.elixir</scope>
-	<description>- Live view stateless component</description>
+	<description>- Stateless live component</description>
 </snippet>

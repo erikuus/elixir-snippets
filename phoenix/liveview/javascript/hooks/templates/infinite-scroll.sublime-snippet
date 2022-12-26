@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-Hooks.InfiniteScroll = { // or const InfiniteScroll if in separate file
+Hooks.InfiniteScroll = {
   mounted(){
     this.observer = new IntersectionObserver((entries) => {
       const entry = entries[0];
@@ -20,7 +20,7 @@ Hooks.InfiniteScroll = { // or const InfiniteScroll if in separate file
   }
 };
 ]]></content>
-  <tabTrigger>pxlvHookInfiniteScroll</tabTrigger>
+  <tabTrigger>.hook-infinitescroll</tabTrigger>
   <scope>source.js</scope>
-  <description>- Infinite Scroll hook template</description>
+  <description>- Infinite Scroll hook</description>
 </snippet>

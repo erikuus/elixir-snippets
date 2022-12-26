@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+# results %{"name" => "Erik", "sex" => "Male"}
+"name=Erik&sex=Male" |> String.trim |> URI.decode_query
+]]></content>
+  <tabTrigger>.url-query-to-map</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Parse url query into map</description>
+</snippet>

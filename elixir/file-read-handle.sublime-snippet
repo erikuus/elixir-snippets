@@ -27,7 +27,7 @@ defmodule ${1:NameSpace}.${2:FileHandler} do
   end
 end
 ]]></content>
-  <tabTrigger>exHandleFileRead</tabTrigger>
+  <tabTrigger>.file-read-handle</tabTrigger>
 	<scope>source.elixir</scope>
-	<description>- Handle file read result (defmodule)</description>
+	<description>- Handle file read result</description>
 </snippet>

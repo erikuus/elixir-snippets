@@ -40,5 +40,5 @@
 ]]></content>
   <tabTrigger>.live-component-stateful</tabTrigger>
 	<scope>source.elixir</scope>
-	<description>- Live view stateful component</description>
+	<description>- Stateful live component</description>
 </snippet>

@@ -6,7 +6,7 @@ let Hooks = {}
 
 export default Hooks;
 ]]></content>
-  <tabTrigger>pxlvHooksContain</tabTrigger>
+  <tabTrigger>.let-hooks-file</tabTrigger>
   <scope>source.js</scope>
-  <description>- Template file that contains all hooks</description>
+  <description>- Start and end file that contains all hooks</description>
 </snippet>

@@ -1,14 +1,8 @@
 <snippet>
   <content><![CDATA[
 import ${1:Hooks} from "./${2:hooks}";
-/*
-let liveSocket = new LiveSocket("/live", Socket, {
-  hooks: Hooks,
-  ...
-});
-*/
 ]]></content>
-  <tabTrigger>pxlvHooksImport</tabTrigger>
+  <tabTrigger>.import-hooks</tabTrigger>
   <scope>source.js</scope>
   <description>- Import hooks into app.js</description>
 </snippet>

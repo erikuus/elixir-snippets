@@ -2,7 +2,7 @@
   <content><![CDATA[
 {:phx_gen_auth, "~> 0.6", only: [:dev], runtime: false}
 ]]></content>
-  <tabTrigger>exDepsGenAuth</tabTrigger>
+  <tabTrigger>.deps-genauth</tabTrigger>
   <scope>source.elixir</scope>
   <description>- Add :phx_gen_auth dependency</description>
 </snippet>

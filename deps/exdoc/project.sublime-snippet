@@ -10,7 +10,7 @@ docs: [
   extras: ["README.md"]
 ]
 ]]></content>
-  <tabTrigger>exDocProjectMetadata</tabTrigger>
+  <tabTrigger>.exdoc-project-metadata</tabTrigger>
   <scope>source.elixir</scope>
   <description>- Add project metadata for docs</description>
 </snippet>
