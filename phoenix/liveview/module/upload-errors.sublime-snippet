@@ -6,7 +6,7 @@ for {ref, err} <- @uploads.photo.errors do %>
   </div>
 <% end
 ]]></content>
-  <tabTrigger>pxlvLiveUploadErrorAll</tabTrigger>
+  <tabTrigger>.upload-errors</tabTrigger>
   <scope>source.elixir</scope>
   <description>- Display all file upload errors</description>
 </snippet>

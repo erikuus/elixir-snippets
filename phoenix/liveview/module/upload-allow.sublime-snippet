@@ -10,7 +10,7 @@ socket =
     # external: &generate_metadata/2
   )
 ]]></content>
-  <tabTrigger>pxlvLiveUploadAllow</tabTrigger>
+  <tabTrigger>.upload-allow</tabTrigger>
   <scope>source.elixir</scope>
   <description>- Allow live file uploads</description>
 </snippet>

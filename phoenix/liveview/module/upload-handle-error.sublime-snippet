@@ -9,7 +9,7 @@ def handle_upload_error(:too_many_files),
 def handle_upload_error(:not_accepted),
   do: "You've selected an unacceptable file type."
 ]]></content>
-  <tabTrigger>pxlvLiveUploadErrorHandle</tabTrigger>
+  <tabTrigger>.upload-handle-error</tabTrigger>
   <scope>source.elixir</scope>
   <description>- Handle upload error messages (def)</description>
 </snippet>

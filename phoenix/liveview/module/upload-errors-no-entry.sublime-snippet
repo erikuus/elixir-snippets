@@ -4,7 +4,7 @@ for err <- upload_errors(@uploads.${1:photo}) do %>
   <%= handle_upload_error(err) %>
 <% end
 ]]></content>
-  <tabTrigger>pxlvLiveUploadErrorNoEntry</tabTrigger>
+  <tabTrigger>.upload-errors-no-entry</tabTrigger>
   <scope>source.elixir</scope>
   <description>- Display entriless file upload errors</description>
 </snippet>
