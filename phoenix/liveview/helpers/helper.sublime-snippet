@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[
+alias $TM_NAMESPACE_WEB.Accounts
+
+@doc """
+Enables live views to access current user in session.
+
+This can be used in your live views as:
+
+  def mount(_params, session, socket) do
+    {:ok, assign_current_user(session, socket)}
+  end
+
+  def render(assigns) do
+    ~L"""
+    <%= @current_user.id %>
+    """
+  end
+"""
+def assign_current_user(session, socket) do
+  assign_new(
+    socket,
+    :current_user,
+    fn ->
+      Accounts.get_user_by_session_token(session["user_token"])
+    end
+  )
+end
+]]></content>
+  <tabTrigger>.helper-assign-current-user</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Live view helper module template (defmodule)</description>
+</snippet>

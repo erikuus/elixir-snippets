@@ -1,8 +1,8 @@
 <snippet>
   <content><![CDATA[
-def handle_event("${1:save}", %{"${2:struct}"=>params}, socket) do
+def handle_event("${1:save}", %{"${2:struct}" => params}, socket) do
   case ${3:Context}.create_${2:struct}(params) do
-    {:ok, ${2:struct_name}} ->
+    {:ok, ${2:struct}} ->
       socket = update(socket, :${2:struct}s, &[${2:struct} | &1])
 
       changeset = ${3:Context}.change_${2:struct}(%${4:Schema}{})
@@ -16,7 +16,7 @@ def handle_event("${1:save}", %{"${2:struct}"=>params}, socket) do
   end
 end
 ]]></content>
-  <tabTrigger>pxlvHandleEventSave</tabTrigger>
+  <tabTrigger>.handle-event-save</tabTrigger>
   <scope>source.elixir</scope>
-  <description>- Handle save event (def)</description>
+  <description>- Handle save event</description>
 </snippet>

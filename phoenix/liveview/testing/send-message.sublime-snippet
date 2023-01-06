@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+send(view.pid, :${1:tick})
+]]></content>
+  <tabTrigger>.test-send-message</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Send message in test case</description>
+</snippet>

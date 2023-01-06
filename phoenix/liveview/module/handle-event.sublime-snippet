@@ -1,11 +1,11 @@
 <snippet>
   <content><![CDATA[
-def handle_event("${1:event-name}", %{"${2:param}"=>${3:var}}, socket) do
-  socket = assign(socket, ${4:key}: ${5:val})
+def handle_event("${1:event-name}", %{"${2:q}" => ${2:q}}, socket) do
+  socket = assign(socket, ${3:key}: ${4:val})
   {:noreply, socket}
 end
 ]]></content>
-  <tabTrigger>pxlvHandleEvent</tabTrigger>
+  <tabTrigger>.handle-event</tabTrigger>
   <scope>source.elixir</scope>
-  <description>- Handle event (def)</description>
+  <description>- Handle event</description>
 </snippet>

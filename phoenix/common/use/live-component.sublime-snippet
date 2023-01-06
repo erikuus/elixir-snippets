@@ -2,7 +2,7 @@
   <content><![CDATA[
 use $TM_NAMESPACE_WEB, :live_component
 ]]></content>
-  <tabTrigger>.use-live-view</tabTrigger>
+  <tabTrigger>.use-live-component</tabTrigger>
   <scope>source.elixir</scope>
   <description>- use :live_component</description>
 </snippet>

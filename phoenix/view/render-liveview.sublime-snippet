@@ -1,8 +1,8 @@
 <snippet>
   <content><![CDATA[
-live_render(@conn, ${1:NameSpace}.${2:Something}Live)
+live_render(@conn, $TM_NAMESPACE_WEB.${1:Some}Live, router: $TM_NAMESPACE_WEB.Router)
 ]]></content>
-  <tabTrigger>pxlvLiveRender</tabTrigger>
+  <tabTrigger>.render-liveview</tabTrigger>
   <scope>text.html.elixir</scope>
   <description>- Render live view</description>
 </snippet>

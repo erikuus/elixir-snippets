@@ -77,7 +77,7 @@ defmodule ${1:NameSpaceWeb}.RegisterLive do
   end
 end
 ]]></content>
-  <tabTrigger>pxlvModuleRegister</tabTrigger>
+  <tabTrigger>.live-view-registration</tabTrigger>
 	<scope>source.elixir</scope>
-	<description>- Live view register module template (defmodule)</description>
+	<description>- Live view registration module template</description>
 </snippet>

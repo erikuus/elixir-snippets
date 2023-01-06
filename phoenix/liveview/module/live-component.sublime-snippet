@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-live_component(${1:Some}Component, ${2:key}: ${3:value})
+live_component($TM_NAMESPACE_WEB.${1:Some}Component, ${2:key}: ${3:value})
 ]]></content>
   <tabTrigger>.live-component</tabTrigger>
   <scope>source.elixir</scope>

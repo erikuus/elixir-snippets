@@ -11,7 +11,7 @@ def live_modal(component, opts, close_opts \\ %{capture_close: true, show_close_
     )
 end
 ]]></content>
-  <tabTrigger>.live-modal-helper</tabTrigger>
+  <tabTrigger>.helper-live-modal</tabTrigger>
   <scope>source.elixir</scope>
-  <description>- Render modal component</description>
+  <description>- Helper to render modal component</description>
 </snippet>

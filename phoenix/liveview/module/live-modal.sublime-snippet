@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[
+live_modal(
+  $TM_NAMESPACE_WEB.ModalComponent,
+  [
+    ${1:key1}: ${2:value1},
+    ${3:key2}: ${4:value2},
+    return_to: Routes.live_path(socket, __MODULE__)
+  ],
+  %{capture_close: false, show_close_btn: true}
+)
+]]></content>
+  <tabTrigger>.live-modal</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Render modal in live view</description>
+</snippet>

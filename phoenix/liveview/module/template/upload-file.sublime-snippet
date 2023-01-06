@@ -192,7 +192,7 @@ defmodule ${1:NameSpaceWeb}.${2:Upload}Live do
     do: "You've selected an unacceptable file type."
 end
 ]]></content>
-  <tabTrigger>pxlvModuleUploadFile</tabTrigger>
+  <tabTrigger>.live-view-upload</tabTrigger>
 	<scope>source.elixir</scope>
-	<description>- Live view file upload template (defmodule)</description>
+	<description>- Live view upload template</description>
 </snippet>

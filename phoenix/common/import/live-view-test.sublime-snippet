@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+import Phoenix.LiveViewTest
+]]></content>
+  <tabTrigger>.import-live-view-test</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- import Phoenix.LiveViewTest</description>
+</snippet>

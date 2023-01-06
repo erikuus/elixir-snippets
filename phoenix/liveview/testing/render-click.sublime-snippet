@@ -4,7 +4,7 @@ view
 |> element("${1:selector}")
 |> render_click()
 ]]></content>
-  <tabTrigger>pxlvTestRenderClick</tabTrigger>
+  <tabTrigger>.test-render-click</tabTrigger>
   <scope>source.elixir</scope>
-  <description>- Live view render click in test case</description>
+  <description>- Render click in test case</description>
 </snippet>

@@ -42,7 +42,7 @@ defmodule $TM_NAMESPACE_WEB.Components.ModalComponent do
   end
 end
 ]]></content>
-  <tabTrigger>.live-modal-component</tabTrigger>
+  <tabTrigger>.live-component-modal</tabTrigger>
 	<scope>source.elixir</scope>
 	<description>- Live view modal component</description>
 </snippet>

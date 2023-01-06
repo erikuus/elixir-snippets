@@ -1,10 +1,10 @@
 <snippet>
   <content><![CDATA[
 view
-|> form("${1:selector}", %{"${2:key}" => ${3:value}})
+|> form("${1:selector}", %{${2:key}: ${3:value}})
 |> render_submit()
 ]]></content>
-  <tabTrigger>pxlvTestRenderSubmit</tabTrigger>
+  <tabTrigger>.test-render-submit</tabTrigger>
   <scope>source.elixir</scope>
-  <description>- Live view render form submit in test case</description>
+  <description>- Render form submit in test case</description>
 </snippet>

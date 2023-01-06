@@ -69,7 +69,7 @@ defmodule ${1:NameSpaceWeb}.${2:Navigation}Live do
 end
 
 ]]></content>
-  <tabTrigger>pxlvModuleNavigation</tabTrigger>
+  <tabTrigger>.live-view-navigation</tabTrigger>
 	<scope>source.elixir</scope>
-	<description>- Live view navigation module template (defmodule)</description>
+	<description>- Live view navigation module template</description>
 </snippet>

@@ -1,16 +1,18 @@
 <snippet>
   <content><![CDATA[
 for entry <- @uploads.photo.entries do %>
-  <%= live_img_preview entry %>
     <%= live_img_preview entry %>
     <%= entry.progress %>%
-    <span style="width:<%= entry.progress %>%"></span>
+
+    #
     <a href="#" phx-click="cancel" phx-value-ref="<%= entry.ref %>">
       &times;
-    </a>  
+    </a>
+
+    # .upload-errors-entry
 <% end
 ]]></content>
-  <tabTrigger>pxlvLiveImagePreview</tabTrigger>
+  <tabTrigger>.upload-live-img-preview</tabTrigger>
   <scope>source.elixir</scope>
   <description>- Display live image preview</description>
 </snippet>

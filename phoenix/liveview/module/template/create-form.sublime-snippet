@@ -90,7 +90,7 @@ defmodule ${1:NameSpaceWeb}.${2:Form}Live do
   end
 end
 ]]></content>
-  <tabTrigger>pxlvModuleCreate</tabTrigger>
+  <tabTrigger>.live-view-create</tabTrigger>
 	<scope>source.elixir</scope>
-	<description>- Live view create form module template (defmodule)</description>
+	<description>- Live view create form module template</description>
 </snippet>

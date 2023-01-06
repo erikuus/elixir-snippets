@@ -2,7 +2,7 @@
   <content><![CDATA[
 f = form_for @changeset, "#", phx_submit: "${1:save}"
 ]]></content>
-  <tabTrigger>pxlvForm</tabTrigger>
+  <tabTrigger>.form</tabTrigger>
   <scope>source.elixir</scope>
   <description>- Form begin tag</description>
 </snippet>

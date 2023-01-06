@@ -2,7 +2,7 @@
   <content><![CDATA[
 assert_patched(view, "/${1:route}?${2:param}=${3:value}")
 ]]></content>
-  <tabTrigger>pxlvTestAssertPatchedUrl</tabTrigger>
+  <tabTrigger>.test-assert-patched</tabTrigger>
   <scope>source.elixir</scope>
-  <description>- Live view assert patched url</description>
+  <description>- Assert patched route</description>
 </snippet>

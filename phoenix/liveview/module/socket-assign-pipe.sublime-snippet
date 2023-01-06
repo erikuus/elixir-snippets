@@ -2,12 +2,10 @@
   <content><![CDATA[
 socket =
   socket
-  |> assign(
-    ${1:key1}: ${2:val1},
-    ${3:key2}: ${4:val2}
-  )
+  |> put_flash(:${1:info}, "${2:Message}")
+  |> assign(${3:key1}: ${4:val1})
 ]]></content>
-  <tabTrigger>pxlvSocketAssignPipe</tabTrigger>
+  <tabTrigger>.socket-assign-pipe</tabTrigger>
   <scope>source.elixir</scope>
   <description>- Assign socket in pipeline (with pipeline)</description>
 </snippet>

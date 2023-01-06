@@ -89,7 +89,7 @@ defmodule ${1:NameSpaceWeb}.${2:Map}Live do
   end
 end
 ]]></content>
-  <tabTrigger>pxlvModuleMap</tabTrigger>
+  <tabTrigger>.live-view-map-interaction</tabTrigger>
 	<scope>source.elixir</scope>
-	<description>- Live view map module template (defmodule)</description>
+	<description>- Live view map interaction module template</description>
 </snippet>

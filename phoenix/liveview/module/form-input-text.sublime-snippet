@@ -2,7 +2,7 @@
   <content><![CDATA[
 text_input f, :${1:field}, placeholder: "${2:Field}", autocomplete="off"
 ]]></content>
-  <tabTrigger>pxlvFormInputText</tabTrigger>
+  <tabTrigger>.form-input-text</tabTrigger>
   <scope>source.elixir</scope>
   <description>- Form text input</description>
 </snippet>

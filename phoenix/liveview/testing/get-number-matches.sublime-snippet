@@ -4,7 +4,7 @@ defp get_number_of_matches(haystack, needle) do
   haystack |> :binary.matches(needle) |> length()
 end
 ]]></content>
-  <tabTrigger>pxlvTestGetNumberOfMatches</tabTrigger>
+  <tabTrigger>.test-get-number-of-matches</tabTrigger>
   <scope>source.elixir</scope>
-  <description>- Live view get number of matches for test case (defp)</description>
+  <description>- Get number of matches for test case</description>
 </snippet>

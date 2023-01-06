@@ -1,8 +1,0 @@
-<snippet>
-  <content><![CDATA[
-send(view.pid, :${1:tick})
-]]></content>
-  <tabTrigger>pxlvTestRenderMessage</tabTrigger>
-  <scope>source.elixir</scope>
-  <description>- Live view render send message in test case</description>
-</snippet>

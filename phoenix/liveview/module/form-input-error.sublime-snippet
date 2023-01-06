@@ -2,7 +2,7 @@
   <content><![CDATA[
 error_tag f, :${1:field}
 ]]></content>
-  <tabTrigger>pxlvFormInputError</tabTrigger>
+  <tabTrigger>.form-input-error</tabTrigger>
   <scope>source.elixir</scope>
   <description>- Form input error tag</description>
 </snippet>

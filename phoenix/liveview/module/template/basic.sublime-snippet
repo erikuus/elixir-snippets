@@ -24,7 +24,7 @@ defmodule ${1:NameSpaceWeb}.${2:Something}Live do
   end
 end
 ]]></content>
-  <tabTrigger>pxlvModuleBasic</tabTrigger>
+  <tabTrigger>.live-view-basic</tabTrigger>
 	<scope>source.elixir</scope>
-	<description>- Live view basic module template (defmodule)</description>
+	<description>- Live view basic module template</description>
 </snippet>

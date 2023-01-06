@@ -2,7 +2,7 @@
   <content><![CDATA[
 assert has_element?(view, "${1:selector}", "${2:value}")
 ]]></content>
-  <tabTrigger>pxlvTestAssertElementExists</tabTrigger>
+  <tabTrigger>.test-assert-element-exists</tabTrigger>
   <scope>source.elixir</scope>
-  <description>- Live view assert element exists</description>
+  <description>- Assert element exists</description>
 </snippet>

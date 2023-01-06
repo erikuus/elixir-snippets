@@ -25,7 +25,7 @@ defmodule $TM_NAMESPACE_WEB.Components.ModalContent.SingleActionComponent do
   end
 end
 ]]></content>
-  <tabTrigger>.live-modal-content-component</tabTrigger>
+  <tabTrigger>.live-component-modal-content</tabTrigger>
 	<scope>source.elixir</scope>
 	<description>- Live view modal content component</description>
 </snippet>

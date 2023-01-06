@@ -88,7 +88,7 @@ defmodule ${1:NameSpaceWeb}.${2:Search}Live do
   end
 end
 ]]></content>
-  <tabTrigger>pxlvModuleSearch</tabTrigger>
+  <tabTrigger>.live-view-search</tabTrigger>
   <scope>source.elixir</scope>
-  <description>- Live view search module template (defmodule)</description>
+  <description>- Live view search module template</description>
 </snippet>

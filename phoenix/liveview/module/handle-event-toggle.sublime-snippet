@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-def handle_event("${1:toggle}", %{"${2:id}"=>${2:id}}, socket) do
+def handle_event("${1:toggle}", %{"${2:id}" => ${2:id}}, socket) do
     ${3:struct} = ${4:Context}.get_${3:struct}!(${2:id})
 
     {:ok, _} =
@@ -19,7 +19,7 @@ def handle_event("${1:toggle}", %{"${2:id}"=>${2:id}}, socket) do
   end
 end
 ]]></content>
-  <tabTrigger>pxlvHandleEventToggle</tabTrigger>
+  <tabTrigger>.handle-event-toggle</tabTrigger>
   <scope>source.elixir</scope>
-  <description>- Handle toggle event (def)</description>
+  <description>- Handle toggle event</description>
 </snippet>

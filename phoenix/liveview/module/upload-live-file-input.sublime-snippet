@@ -2,7 +2,7 @@
   <content><![CDATA[
 live_file_input @uploads.${1:photo}
 ]]></content>
-  <tabTrigger>pxlvLiveFileInput</tabTrigger>
+  <tabTrigger>.upload-live-file-input</tabTrigger>
   <scope>source.elixir</scope>
   <description>- Display live file input</description>
 </snippet>

@@ -4,7 +4,7 @@ view
 |> element("${1:selector}")
 |> render_hook("${2:event}", %{${3:}})
 ]]></content>
-  <tabTrigger>pxlvTestRenderHook</tabTrigger>
+  <tabTrigger>.test-render-hook</tabTrigger>
   <scope>source.elixir</scope>
-  <description>- Live view render click in test case</description>
+  <description>- Render hook in test case</description>
 </snippet>

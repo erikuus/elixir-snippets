@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+html = render_component($TM_NAMESPACE_WEB.${1:Some}Component, ${2:key}: ${3:value})
+]]></content>
+  <tabTrigger>.test-render-component</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Render component in test case</description>
+</snippet>

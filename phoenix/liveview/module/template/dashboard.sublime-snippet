@@ -54,7 +54,7 @@ defmodule ${1:NameSpaceWeb}.${2:Dashboard}Live do
   end
 end
 ]]></content>
-  <tabTrigger>pxlvModuleDashboard</tabTrigger>
+  <tabTrigger>.live-view-dashboard</tabTrigger>
 	<scope>source.elixir</scope>
-	<description>- Live view dashboard module template (defmodule)</description>
+	<description>- Live view dashboard module template</description>
 </snippet>

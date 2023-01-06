@@ -2,7 +2,7 @@
   <content><![CDATA[
 label f, :${1:field}
 ]]></content>
-  <tabTrigger>pxlvFormInputLabel</tabTrigger>
+  <tabTrigger>.form-input-label</tabTrigger>
   <scope>source.elixir</scope>
   <description>- Form input label</description>
 </snippet>

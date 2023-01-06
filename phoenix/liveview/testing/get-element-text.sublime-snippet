@@ -7,7 +7,7 @@ defp get_element_text(html, selector) do
   |> Floki.text()
 end
 ]]></content>
-  <tabTrigger>pxlvTestGetElementText</tabTrigger>
+  <tabTrigger>.test-get-element-text</tabTrigger>
   <scope>source.elixir</scope>
-  <description>- Live view get element text for test case (defp)</description>
+  <description>- Get element text form html by selector</description>
 </snippet>

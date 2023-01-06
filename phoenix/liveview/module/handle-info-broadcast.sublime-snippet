@@ -16,7 +16,7 @@ def handle_info({:${1:item}_${2:created}, ${1:item}}, socket) do
   {:noreply, socket}
 end
 ]]></content>
-  <tabTrigger>pxlvHandleInfoBroadcast</tabTrigger>
+  <tabTrigger>.handle-info-broadcast</tabTrigger>
   <scope>source.elixir</scope>
-  <description>- Handle broadcasted info (def)</description>
+  <description>- Handle broadcasted info</description>
 </snippet>

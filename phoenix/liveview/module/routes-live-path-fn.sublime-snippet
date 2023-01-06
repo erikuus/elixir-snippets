@@ -7,7 +7,7 @@ defp live_link(socket, text, params, class) do
     class: class
 end
 ]]></content>
-  <tabTrigger>pxlvLiveLink</tabTrigger>
+  <tabTrigger>.routes-live-path-fn</tabTrigger>
   <scope>source.elixir</scope>
-  <description>- Function to display live link (def)</description>
+  <description>- Function to display live patch</description>
 </snippet>

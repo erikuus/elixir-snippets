@@ -2,7 +2,7 @@
   <content><![CDATA[
 Routes.${1:something}_path(@socket, :${2:action})
 ]]></content>
-  <tabTrigger>pxlvLivePathAction</tabTrigger>
+  <tabTrigger>.routes-live-path-action</tabTrigger>
   <scope>source.elixir</scope>
-  <description>- Get path of the live view</description>
+  <description>- Get path to the live view with action</description>
 </snippet>

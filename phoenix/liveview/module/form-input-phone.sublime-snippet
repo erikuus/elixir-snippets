@@ -2,7 +2,7 @@
   <content><![CDATA[
 telephone_input f, :${1:field}, placeholder: "${2:Field}", autocomplete: "off"
 ]]></content>
-  <tabTrigger>pxlvFormInputPhone</tabTrigger>
+  <tabTrigger>.form-input-phone</tabTrigger>
   <scope>source.elixir</scope>
   <description>- Form phone input</description>
 </snippet>

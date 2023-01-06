@@ -1,13 +1,12 @@
 <snippet>
   <content><![CDATA[
-# <div phx-window-keyup="${1:move-right}"></div>
 def handle_event("${1:move-right}", %{"key" => "${2:ArrowRight}"}, socket) do
   ${3:}
 
   {:noreply, socket}
 end
 ]]></content>
-  <tabTrigger>pxlvHandleEventKey</tabTrigger>
+  <tabTrigger>.handle-event-key</tabTrigger>
   <scope>source.elixir</scope>
-  <description>- Handle key event (def)</description>
+  <description>- Handle key event</description>
 </snippet>

@@ -54,7 +54,7 @@ defmodule ${1:NameSpaceWeb}.${2:InfiniteScrolling}Live do
   end
 end
 ]]></content>
-  <tabTrigger>pxlvModuleInfiniteScrolling</tabTrigger>
+  <tabTrigger>.live-view-infinite-scrolling</tabTrigger>
 	<scope>source.elixir</scope>
-	<description>- Live view infinite scrolling module template (defmodule)</description>
+	<description>- Live view infinite scrolling module template</description>
 </snippet>

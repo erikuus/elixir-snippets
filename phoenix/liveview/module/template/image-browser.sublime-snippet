@@ -80,7 +80,7 @@ defmodule ${1:NameSpaceWeb}.${2:ImageBrowser}Live do
   end
 end
 ]]></content>
-  <tabTrigger>pxlvModuleImageBrowser</tabTrigger>
+  <tabTrigger>.live-view-image-browser</tabTrigger>
 	<scope>source.elixir</scope>
-	<description>- Live view (key events) image browser module template (defmodule)</description>
+	<description>- Live view (key events) image browser module template</description>
 </snippet>

@@ -1,8 +1,8 @@
 <snippet>
   <content><![CDATA[
-socket = push_patch(socket, to: pxlvLivePath)
+socket = push_patch(socket, to: ${1:})
 ]]></content>
-  <tabTrigger>pxlvPushPatch</tabTrigger>
+  <tabTrigger>.push-patch</tabTrigger>
   <scope>source.elixir</scope>
   <description>- Push new live params</description>
 </snippet>

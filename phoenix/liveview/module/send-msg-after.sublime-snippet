@@ -16,7 +16,7 @@ defp send_after(socket) do
   Process.send_after(self(), ${1::tick}, socket.assigns.${2:time})
 end
 ]]></content>
-  <tabTrigger>pxlvMsSendAfter</tabTrigger>
+  <tabTrigger>.send-msg-after</tabTrigger>
   <scope>source.elixir</scope>
-  <description>- Send message after time (defp)</description>
+  <description>- Send message after given time</description>
 </snippet>

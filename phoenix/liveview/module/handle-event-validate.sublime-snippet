@@ -1,10 +1,10 @@
 <snippet>
   <content><![CDATA[
-def handle_event("${1:validate}", %{"${2:struct}"=>params}, socket) do
+def handle_event("${1:validate}", %{"${2:struct}" => params}, socket) do
 
   changeset =
-    %${4:Schema}{}
-    |> ${3:Context}.change_${2:struct}(params)
+    %${3:Schema}{}
+    |> ${4:Context}.change_${2:struct}(params)
     |> Map.put(:action, :insert)
 
   socket = assign(socket, changeset: changeset)
@@ -12,7 +12,7 @@ def handle_event("${1:validate}", %{"${2:struct}"=>params}, socket) do
   {:noreply, socket}
 end
 ]]></content>
-  <tabTrigger>pxlvHandleEventValidate</tabTrigger>
+  <tabTrigger>.handle-event-validate</tabTrigger>
   <scope>source.elixir</scope>
-  <description>- Handle validate event (def)</description>
+  <description>- Handle validate event</description>
 </snippet>

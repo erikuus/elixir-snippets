@@ -5,7 +5,7 @@ def handle_params(%{"${1:param}"=>${2:var}}, ${4:url}, socket) do
   {:noreply, socket}
 end
 ]]></content>
-  <tabTrigger>pxlvHandleParams</tabTrigger>
+  <tabTrigger>.handle-params</tabTrigger>
   <scope>source.elixir</scope>
   <description>- Handle params (def)</description>
 </snippet>

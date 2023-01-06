@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+use $TM_NAMESPACE_WEB, :component
+]]></content>
+  <tabTrigger>.use-component</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- use :component</description>
+</snippet>

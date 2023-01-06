@@ -7,7 +7,7 @@ ${1:something} =
 
 assert ${1:something} =~ ${3:something_else}
 ]]></content>
-  <tabTrigger>pxlvTestAssertElementText</tabTrigger>
+  <tabTrigger>.test-assert-element-text</tabTrigger>
   <scope>source.elixir</scope>
-  <description>- Live view assert element text</description>
+  <description>- Assert element text</description>
 </snippet>

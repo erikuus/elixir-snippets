@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+render(@conn, "${1:template}.html", ${2:key}: ${3:value})
+]]></content>
+  <tabTrigger>.render-view</tabTrigger>
+  <scope>text.html.elixir</scope>
+  <description>- Render view</description>
+</snippet>

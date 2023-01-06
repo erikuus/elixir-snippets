@@ -9,7 +9,7 @@ defp create_${1:data}(attributes) do
   ${1:data}
 end
 ]]></content>
-  <tabTrigger>pxlvTestInsertData</tabTrigger>
+  <tabTrigger>.test-insert-data</tabTrigger>
   <scope>source.elixir</scope>
-  <description>- Live view insert data for test case (defp)</description>
+  <description>- Insert data for test case</description>
 </snippet>

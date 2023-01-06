@@ -138,7 +138,7 @@ defmodule ${1:NameSpaceWeb}.${2:Paginate}Live do
   defp display_sort_order(:desc), do: "▼"
 end
 ]]></content>
-  <tabTrigger>pxlvModulePaginate</tabTrigger>
+  <tabTrigger>.live-view-pagination</tabTrigger>
   <scope>source.elixir</scope>
-  <description>- Live view paginate and sort module template (defmodule)</description>
+  <description>- Live view pagination and sort module template</description>
 </snippet>
