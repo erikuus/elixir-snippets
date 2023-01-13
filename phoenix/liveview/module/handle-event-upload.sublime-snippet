@@ -18,7 +18,7 @@ defp filename(entry) do
   "#{entry.uuid}.#{ext}"
 end
 ]]></content>
-  <tabTrigger>pxlvHandleEventUpload</tabTrigger>
+  <tabTrigger>.handle-event-upload</tabTrigger>
   <scope>source.elixir</scope>
-  <description>- Handle upload event (def)</description>
+  <description>- Handle upload event</description>
 </snippet>

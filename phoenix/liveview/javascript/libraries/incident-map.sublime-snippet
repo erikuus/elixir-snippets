@@ -67,7 +67,7 @@ class IncidentMap {
 
 export default IncidentMap;
 ]]></content>
-  <tabTrigger>pxlvJsIncidentMap</tabTrigger>
+  <tabTrigger>.lib-incident-map</tabTrigger>
   <scope>source.js</scope>
   <description>- incident map javascript</description>
 </snippet>

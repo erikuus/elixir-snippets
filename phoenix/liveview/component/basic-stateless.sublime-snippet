@@ -1,24 +1,22 @@
 <snippet>
 	<content><![CDATA[
-defmodule ${1:NameSpaceWeb}.${2:Autocomplete}Live do
-  use ${1:NameSpaceWeb}, :live_component
+use $TM_NAMESPACE_WEB, :live_component
 
-  def mount(socket) do
-    {:ok, socket}
-  end
+def mount(socket) do
+  {:ok, socket}
+end
 
-  def update(assigns, socket) do
-    socket = assign(socket, assigns)
-    {:ok, socket}
-  end
+def update(assigns, socket) do
+  socket = assign(socket, assigns)
+  {:ok, socket}
+end
 
-  def render(assigns) do
-    ~H"""
-    <div>
-        <%= @${3:attribute_name} %>
-    </div>
-    """
-  end
+def render(assigns) do
+  ~H"""
+  <div>
+      <%= @${3:attribute_name} %>
+  </div>
+  """
 end
 ]]></content>
   <tabTrigger>.live-component-stateless</tabTrigger>

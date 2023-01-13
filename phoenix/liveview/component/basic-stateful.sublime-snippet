@@ -1,41 +1,41 @@
 <snippet>
 	<content><![CDATA[
-  use ${1:NameSpaceWeb}, :live_component
+use $TM_NAMESPACE_WEB, :live_component
 
-  def mount(socket) do
-    socket = assign(socket, name: nil)
+def mount(socket) do
+  socket = assign(socket, name: nil)
 
-    {:ok, socket}
-  end
+  {:ok, socket}
+end
 
-  def update(assigns, socket) do
-    socket = assign(socket, assigns)
+def update(assigns, socket) do
+  socket = assign(socket, assigns)
 
-    {:ok, socket}
-  end
+  {:ok, socket}
+end
 
-  def render(assigns) do
-    ~H"""
-    <form phx-change="display-name" phx-submit="send-name" phx-target="<%= @myself %>">
-      <input type="text" name="name" value={"#{@name}"} placeholder="Name">
-      <button type="submit">Send</button>
-    </form>
-    <%= if(@name) do %>
-      <p>Name is <%= @name %></p>
-    <% end %>
-    """
-  end
+def render(assigns) do
+  ~H"""
+  <form phx-change="display-name" phx-submit="send-name" phx-target="<%= @myself %>">
+    <input type="text" name="name" value={"#{@name}"} placeholder="Name">
+    <button type="submit">Send</button>
+  </form>
+  <%= if(@name) do %>
+    <p>Name is <%= @name %></p>
+  <% end %>
+  """
+end
 
-  def handle_event("display-name", %{"name" => name}, socket) do
-    socket = assign(socket, name: name)
+def handle_event("display-name", %{"name" => name}, socket) do
+  socket = assign(socket, name: name)
 
-    {:noreply, socket}
-  end
+  {:noreply, socket}
+end
 
-  def handle_event("send-name", _, socket) do
-    send(self(), {:name, socket.assigns.name})
+def handle_event("send-name", _, socket) do
+  send(self(), {:name, socket.assigns.name})
 
-    {:noreply, socket}
+  {:noreply, socket}
   end
 ]]></content>
   <tabTrigger>.live-component-stateful</tabTrigger>

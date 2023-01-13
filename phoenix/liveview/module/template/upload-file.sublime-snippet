@@ -1,196 +1,194 @@
 <snippet>
 	<content><![CDATA[
-defmodule ${1:NameSpaceWeb}.${2:Upload}Live do
-  use ${1:NameSpaceWeb}, :live_view
+use $TM_NAMESPACE_WEB, :live_view
 
-  alias ${3:NameSpace}.${4:Context}
-  alias ${3:NameSpace}.${4:Context}.${5:Schema}
+alias $TM_NAMESPACE.${4:Context}
+alias $TM_NAMESPACE.${4:Context}.${5:Schema}
 
-  def mount(_params, _session, socket) do
-    if connected?(socket), do: ${4:Context}.subscribe()
+def mount(_params, _session, socket) do
+  if connected?(socket), do: ${4:Context}.subscribe()
 
-    ${6:struct}s = ${4:Context}.list_${6:struct}s()
-    changeset = ${4:Context}.change_${6:struct}(%${5:Schema}{})
+  ${6:struct}s = ${4:Context}.list_${6:struct}s()
+  changeset = ${4:Context}.change_${6:struct}(%${5:Schema}{})
 
-    socket =
-      assign(socket,
-        ${6:struct}s: ${6:struct}s,
-        changeset: changeset
-      )
+  socket =
+    assign(socket,
+      ${6:struct}s: ${6:struct}s,
+      changeset: changeset
+    )
 
-    socket =
-      allow_upload(
-        socket,
-        :photo,
-        accept: ~w(.jpg .png),
-        max_entries: 3,
-        max_file_size: 10_000_000
-      )
+  socket =
+    allow_upload(
+      socket,
+      :photo,
+      accept: ~w(.jpg .png),
+      max_entries: 3,
+      max_file_size: 10_000_000
+    )
 
-    {:ok, socket, temporary_assigns: [${6:struct}s: []]}
-  end
+  {:ok, socket, temporary_assigns: [${6:struct}s: []]}
+end
 
-  def render(assigns) do
-    ~L"""
-    <%= f = form_for @changeset, "#",
-          id: "create-${6:struct}",
-          phx_submit: "save",
-          phx_change: "validate" %>
+def render(assigns) do
+  ~L"""
+  <%= f = form_for @changeset, "#",
+        id: "create-${6:struct}",
+        phx_submit: "save",
+        phx_change: "validate" %>
 
-      <%= text_input f, :name, placeholder: "Name" %>
-      <%= error_tag f, :name %>
+    <%= text_input f, :name, placeholder: "Name" %>
+    <%= error_tag f, :name %>
 
-      <div class="drop" phx-drop-target="<%= @uploads.photo.ref %>">
+    <div class="drop" phx-drop-target="<%= @uploads.photo.ref %>">
+      <div>
+        <img src="/images/upload.svg">
         <div>
-          <img src="/images/upload.svg">
-          <div>
-            <label for="<%= @uploads.photo.ref %>">
-              <span>Upload a file</span>
-              <%= live_file_input @uploads.photo, class: "sr-only" %>
-            </label>
-            <span>or drag and drop</span>
-          </div>
-          <p>
-            <%= @uploads.photo.max_entries %> photos max,
-            up to <%= trunc(@uploads.photo.max_file_size / 1_000_000) %> MB each
-          </p>
+          <label for="<%= @uploads.photo.ref %>">
+            <span>Upload a file</span>
+            <%= live_file_input @uploads.photo, class: "sr-only" %>
+          </label>
+          <span>or drag and drop</span>
         </div>
+        <p>
+          <%= @uploads.photo.max_entries %> photos max,
+          up to <%= trunc(@uploads.photo.max_file_size / 1_000_000) %> MB each
+        </p>
       </div>
+    </div>
 
-      <%= for err <- upload_errors(@uploads.photo) do %>
-        <div class="error">
-          <%= handle_upload_error(err) %>
-        </div>
-      <% end %>
-
-      <%= for entry <- @uploads.photo.entries do %>
-        <div class="entry">
-          <%= live_img_preview entry %>
-
-          <div class="progress">
-            <div class="value">
-              <%= entry.progress %>%
-            </div>
-            <div class="bar">
-              <span style="width:<%= entry.progress %>%"></span>
-            </div>
-          </div>
-
-          <a href="#" phx-click="cancel" phx-value-ref="<%= entry.ref %>">
-            &times;
-          </a>
-
-          <%= for err <- upload_errors(@uploads.photo, entry) do %>
-            <div class="error">
-              <%= handle_upload_error(err) %>
-            </div>
-          <% end %>
-        </div>
-      <% end %>
-
-      <div class="hint">
-        You can upload <%= @uploads.photo.max_entries %> photos
-        <%= trunc(@uploads.photo.max_file_size / 1_000_000) %> MB each.
+    <%= for err <- upload_errors(@uploads.photo) do %>
+      <div class="error">
+        <%= handle_upload_error(err) %>
       </div>
+    <% end %>
 
-      <%= submit "Upload", phx_disable_with: "Uploading..." %>
+    <%= for entry <- @uploads.photo.entries do %>
+      <div class="entry">
+        <%= live_img_preview entry %>
 
-    </form>
+        <div class="progress">
+          <div class="value">
+            <%= entry.progress %>%
+          </div>
+          <div class="bar">
+            <span style="width:<%= entry.progress %>%"></span>
+          </div>
+        </div>
 
-    <div id="photos" phx-update="prepend">
-      <%= for ${6:struct} <- @${6:struct}s do %>
-        <%= for {photo_url, index} <- Enum.with_index(${6:struct}.photo_urls) do %>
-          <div class="photo" id="<%= ${6:struct}.id %>-<%= index %>">
-            <img src="<%= photo_url %>">
-            <div class="name">
-              <%= ${6:struct}.name %> (<%= index + 1 %>)
-            </div>
+        <a href="#" phx-click="cancel" phx-value-ref="<%= entry.ref %>">
+          &times;
+        </a>
+
+        <%= for err <- upload_errors(@uploads.photo, entry) do %>
+          <div class="error">
+            <%= handle_upload_error(err) %>
           </div>
         <% end %>
-      <% end %>
+      </div>
+    <% end %>
+
+    <div class="hint">
+      You can upload <%= @uploads.photo.max_entries %> photos
+      <%= trunc(@uploads.photo.max_file_size / 1_000_000) %> MB each.
     </div>
-    """
-  end
 
-  def handle_event("cancel", %{"ref" => ref}, socket) do
-    socket = cancel_upload(socket, :photo, ref)
-    {:noreply, socket}
-  end
+    <%= submit "Upload", phx_disable_with: "Uploading..." %>
 
-  @doc """
-  ## Requires in context module:
+  </form>
 
-    def create_${6:struct}(%${5:Schema}{} = ${6:struct}, attrs \\ %{}, fun) do
-      ${6:struct}
-      |> ${5:Schema}.changeset(attrs)
-      |> Repo.insert()
-      |> after_save(fun)
-      |> broadcast(:${6:struct}_created)
-    end
-
-    def after_save({:ok, ${6:struct}}, fun) do
-      {:ok, _${6:struct}} = fun.(${6:struct})
-    end
-
-    def after_save(error, _fun), do: error
-
+  <div id="photos" phx-update="prepend">
+    <%= for ${6:struct} <- @${6:struct}s do %>
+      <%= for {photo_url, index} <- Enum.with_index(${6:struct}.photo_urls) do %>
+        <div class="photo" id="<%= ${6:struct}.id %>-<%= index %>">
+          <img src="<%= photo_url %>">
+          <div class="name">
+            <%= ${6:struct}.name %> (<%= index + 1 %>)
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
   """
-  def handle_event("save", %{"${6:struct}" => params}, socket) do
-    {completed, []} = uploaded_entries(socket, :photo)
-
-    urls =
-      for entry <- completed do
-        Routes.static_path(socket, "/uploads/#{filename(entry)}")
-      end
-
-    ${6:struct} = %${5:Schema}{photo_urls: urls}
-
-    case ${4:Context}.create_${6:struct}(${6:struct}, params, &consume_photos(socket, &1)) do
-      {:ok, _${6:struct}} ->
-        changeset = ${4:Context}.change_${6:struct}(%${5:Schema}{})
-        {:noreply, assign(socket, changeset: changeset)}
-
-      {:error, %Ecto.Changeset{} = changeset} ->
-        {:noreply, assign(socket, changeset: changeset)}
-    end
-  end
-
-  def handle_event("validate", %{"${6:struct}" => params}, socket) do
-    changeset =
-      %${5:Schema}{}
-      |> ${4:Context}.change_${6:struct}(params)
-      |> Map.put(:action, :insert)
-
-    {:noreply, assign(socket, changeset: changeset)}
-  end
-
-  def handle_info({:${6:struct}_created, ${6:struct}}, socket) do
-    {:noreply, update(socket, :${6:struct}s, fn ${6:struct}s -> [${6:struct} | ${6:struct}s] end)}
-  end
-
-  def consume_photos(socket, ${6:struct}) do
-    consume_uploaded_entries(socket, :photo, fn _meta, _entry ->
-      dest = Path.join("priv/static/uploads", filename(entry))
-      File.cp!(meta.path, dest)
-    end)
-
-    {:ok, ${6:struct}}
-  end
-
-  def filename(entry) do
-    [ext | _] = MIME.extensions(entry.client_type)
-    "#{entry.uuid}.#{ext}"
-  end
-
-  def handle_upload_error(:too_large),
-    do: "File too large (max 10 MB)."
-
-  def handle_upload_error(:too_many_files),
-    do: "You've selected too many files."
-
-  def handle_upload_error(:not_accepted),
-    do: "You've selected an unacceptable file type."
 end
+
+def handle_event("cancel", %{"ref" => ref}, socket) do
+  socket = cancel_upload(socket, :photo, ref)
+  {:noreply, socket}
+end
+
+@doc """
+## Requires in context module:
+
+  def create_${6:struct}(%${5:Schema}{} = ${6:struct}, attrs \\ %{}, fun) do
+    ${6:struct}
+    |> ${5:Schema}.changeset(attrs)
+    |> Repo.insert()
+    |> after_save(fun)
+    |> broadcast(:${6:struct}_created)
+  end
+
+  def after_save({:ok, ${6:struct}}, fun) do
+    {:ok, _${6:struct}} = fun.(${6:struct})
+  end
+
+  def after_save(error, _fun), do: error
+
+"""
+def handle_event("save", %{"${6:struct}" => params}, socket) do
+  {completed, []} = uploaded_entries(socket, :photo)
+
+  urls =
+    for entry <- completed do
+      Routes.static_path(socket, "/uploads/#{filename(entry)}")
+    end
+
+  ${6:struct} = %${5:Schema}{photo_urls: urls}
+
+  case ${4:Context}.create_${6:struct}(${6:struct}, params, &consume_photos(socket, &1)) do
+    {:ok, _${6:struct}} ->
+      changeset = ${4:Context}.change_${6:struct}(%${5:Schema}{})
+      {:noreply, assign(socket, changeset: changeset)}
+
+    {:error, %Ecto.Changeset{} = changeset} ->
+      {:noreply, assign(socket, changeset: changeset)}
+  end
+end
+
+def handle_event("validate", %{"${6:struct}" => params}, socket) do
+  changeset =
+    %${5:Schema}{}
+    |> ${4:Context}.change_${6:struct}(params)
+    |> Map.put(:action, :insert)
+
+  {:noreply, assign(socket, changeset: changeset)}
+end
+
+def handle_info({:${6:struct}_created, ${6:struct}}, socket) do
+  {:noreply, update(socket, :${6:struct}s, fn ${6:struct}s -> [${6:struct} | ${6:struct}s] end)}
+end
+
+def consume_photos(socket, ${6:struct}) do
+  consume_uploaded_entries(socket, :photo, fn _meta, _entry ->
+    dest = Path.join("priv/static/uploads", filename(entry))
+    File.cp!(meta.path, dest)
+  end)
+
+  {:ok, ${6:struct}}
+end
+
+def filename(entry) do
+  [ext | _] = MIME.extensions(entry.client_type)
+  "#{entry.uuid}.#{ext}"
+end
+
+def handle_upload_error(:too_large),
+  do: "File too large (max 10 MB)."
+
+def handle_upload_error(:too_many_files),
+  do: "You've selected too many files."
+
+def handle_upload_error(:not_accepted),
+  do: "You've selected an unacceptable file type."
 ]]></content>
   <tabTrigger>.live-view-upload</tabTrigger>
 	<scope>source.elixir</scope>

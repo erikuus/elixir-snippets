@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+<a href="#" phx-click="cancel" phx-value-ref="<%= entry.ref %>">
+  &times;
+</a>
+]]></content>
+  <tabTrigger>.upload-live-cancel-link</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Display cancel link</description>
+</snippet>

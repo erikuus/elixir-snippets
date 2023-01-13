@@ -22,7 +22,7 @@ Uploaders.S3 = function (entries, onViewError) {
   })
 }
 ]]></content>
-  <tabTrigger>pxlvUploaderS3</tabTrigger>
+  <tabTrigger>.uploader-s3</tabTrigger>
   <scope>source.js</scope>
   <description>- Amazon S3 file uploader</description>
 </snippet>

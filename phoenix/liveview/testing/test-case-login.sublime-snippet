@@ -15,7 +15,7 @@ test "redirects to login page if user is not logged in", %{conn: conn} do
   assert {:error, {:redirect, %{to: "/users/log_in"}}} = live(conn, "/${2:}")
 end
 ]]></content>
-  <tabTrigger>pxlvTestCaseLogin</tabTrigger>
+  <tabTrigger>.test-case-login</tabTrigger>
   <scope>source.elixir</scope>
   <description>- Live view test login (def)</description>
 </snippet>

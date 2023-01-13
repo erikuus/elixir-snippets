@@ -61,7 +61,7 @@ class LineChart {
 
 export default LineChart;
 ]]></content>
-  <tabTrigger>pxlvJsLineChart</tabTrigger>
+  <tabTrigger>.lib-line-chart</tabTrigger>
   <scope>source.js</scope>
   <description>- line chart javascript</description>
 </snippet>

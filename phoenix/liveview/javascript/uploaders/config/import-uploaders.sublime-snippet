@@ -1,14 +1,8 @@
 <snippet>
   <content><![CDATA[
 import ${1:Uploaders} from "./${2:uploaders}";
-/*
-let liveSocket = new LiveSocket("/live", Socket, {
-  uploaders: Uploaders,
-  ...
-});
-*/
 ]]></content>
-  <tabTrigger>pxlvUploadersImport</tabTrigger>
+  <tabTrigger>.import-uploaders</tabTrigger>
   <scope>source.js</scope>
   <description>- Import uploaders into app.js</description>
 </snippet>

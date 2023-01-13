@@ -1,0 +1,12 @@
+<snippet>
+  <content><![CDATA[
+def render(assigns) do
+  ~H"""
+
+  """
+end
+]]></content>
+  <tabTrigger>.render</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Render in live module</description>
+</snippet>

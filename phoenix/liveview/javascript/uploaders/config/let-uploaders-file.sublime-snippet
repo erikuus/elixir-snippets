@@ -6,7 +6,7 @@ let Uploaders = {}
 
 export default Uploaders;
 ]]></content>
-  <tabTrigger>pxlvUploadersContain</tabTrigger>
+  <tabTrigger>.let-uploaders-file</tabTrigger>
   <scope>source.js</scope>
-  <description>- Template file that contains all uploaders</description>
+  <description>- Start and end file that contains all uploaders</description>
 </snippet>
