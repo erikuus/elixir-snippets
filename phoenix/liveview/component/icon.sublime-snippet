@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+<.icon name="${1:home}" class="${2:h-6 w-6}${3:}" />
+]]></content>
+  <tabTrigger>.icon</tabTrigger>
+	<scope>source.elixir meta.function-call.arguments.elixir meta.block.elixir meta.function-call.arguments.elixir meta.block.elixir meta.string.elixir text.html.heex</scope>
+	<description>- Icon component</description>
+</snippet>

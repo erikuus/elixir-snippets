@@ -14,7 +14,7 @@ end
 def render(assigns) do
   ~H"""
   <div>
-      <%= @${3:attribute_name} %>
+      
   </div>
   """
 end
