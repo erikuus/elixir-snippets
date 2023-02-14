@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+mix phx.gen.context Accounts User tbl_user title:string subtitle:string
+]]></content>
+  <tabTrigger>mix phx.gen.context Accounts User tbl_user title:string subtitle:string</tabTrigger>
+  <scope>text.plain</scope>
+  <description>- Generate database context</description>
+</snippet>

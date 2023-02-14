@@ -1,90 +1,90 @@
 <snippet>
 	<content><![CDATA[
-defmodule ${1:NameSpaceWeb}.${2:Search}Live do
-  use ${1:NameSpaceWeb}, :live_view
+use $TM_NAMESPACE_WEB, :live_view
 
-  alias ${3:NameSpace}.${4:Context}
+import $TM_NAMESPACE.UiComponent
 
-  def mount(_params, _session, socket) do
-    socket =
-      assign(
-        socket,
-        query: nil,
-        results: [],
-        loading: false
-      )
+alias $TM_NAMESPACE.${1:Context}
 
-    {:ok, socket}
-  end
+def mount(_params, _session, socket) do
+  socket =
+    assign(
+      socket,
+      query: nil,
+      results: [],
+      loading: false
+    )
 
-  def render(assigns) do
-    ~L"""
-    <h1>Find</h1>
-    <form phx-submit="start-search">
-      <input
-        type="text"
-        name="query"
-        autofocus
-        autocomplete="off"
-        placeholder="Query"
-        value="<%= @query %>"
-        <%= if @loading, do: "readonly" %>
-      />
-      <button>
-        <img src="images/search.svg">
-      </button>
-    </form>
-    <%= if @loading do %>
-    <div class="loader">
-      Loading ...
-    </div>
+  {:ok, socket}
+end
+
+def render(assigns) do
+  ~L"""
+  <h1>Find</h1>
+  <form phx-submit="search">
+    <input
+      type="text"
+      name="query"
+      autofocus
+      autocomplete="off"
+      placeholder="Query"
+      value="<%= @query %>"
+      <%= if @loading, do: "readonly" %>
+    />
+    <button>
+      <img src="images/search.svg">
+    </button>
+  </form>
+  <%= if @loading do %>
+  <div class="loader">
+    Loading ...
+  </div>
+  <% end %>
+  <div class="results">
+    <%= for result <- @results do %>
+      <%= result.name %>
     <% end %>
-    <div class="results">
-      <%= for result <- @results do %>
-        <%= result.name %>
-      <% end %>
-    </div>
-    """
-  end
+  </div>
+  """
+end
 
-  def handle_event("start-search", %{"query" => query}, socket) do
-    send(self(), {:find_results, query})
+def handle_event("search", %{"query" => query}, socket) do
+  send(self(), {:find, query})
 
-    socket =
-      assign(
-        socket,
-        query: nil,
-        results: [],
-        loading: true
-      )
+  socket =
+    assign(
+      socket,
+      query: nil,
+      results: [],
+      loading: true
+    )
 
-    {:noreply, socket}
-  end
+  {:noreply, socket}
+end
 
-  def handle_info({:find_results, query}, socket) do
-    case ${4:Context}.find(query) do
-      [] ->
-        socket =
-          socket
-          |> put_flash(:info, "No results for \"#{query}\"")
-          |> assign(
-            results: [],
-            loading: false
-          )
+def handle_info({:find, query}, socket) do
+  case ${1:Context}.find(query) do
+    [] ->
+      socket =
+        socket
+        |> put_flash(:info, "No results for \"#{query}\"")
+        |> assign(
+          results: [],
+          loading: false
+        )
 
-        {:noreply, socket}
+      {:noreply, socket}
 
-      results ->
-        socket =
-          socket
-          |> clear_flash()
-          |> assign(
-            results: results,
-            loading: false
-          )
+    results ->
+      socket =
+        socket
+        |> clear_flash()
+        |> assign(
+          results: results,
+          loading: false
+        )
 
-        {:noreply, socket}
-    end
+      {:noreply, socket}
   end
 end
 ]]></content>

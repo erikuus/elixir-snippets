@@ -2,53 +2,42 @@
 	<content><![CDATA[
 use $TM_NAMESPACE_WEB, :live_view
 
-alias $TM_NAMESPACE.${4:Context}
+import $TM_NAMESPACE.UiComponent
 
-def mount(_params, _session, socket) do
-  if connected?(socket) do
-    :timer.send_interval(1000, self(), :tick)
+alias $TM_NAMESPACE.${1:Context}
+
+  def mount(_params, _session, socket) do
+    if connected?(socket), do: Process.send_after(self(), :refresh, 1000)
+    {:ok, assign_stats(socket)}
   end
 
-  socket = assign_stats(socket)
-
-  {:ok, socket}
-end
-
 def render(assigns) do
-  ~L"""
-  <h1>Dashboard</h1>
-  <div id="dashboard">
-    <div class="stats">
-      <%= @users %>
-    </div>
-    <div class="stat">
+  ~H"""
+  <.statset>
+    <.stat label="Orders">
       <%= @orders %>
-    </div>
-    <div class="stat">
-      <%= @amount%>
-    </div>
-    <button phx-click="refresh">
-      <img src="images/refresh.svg">
-    </button>
-  </div>
+    </.stat>
+    <.stat label="Amount">
+      <%= @amount %>
+    </.stat>
+    <.stat label="Satisfaction">
+      <%= @satisfaction %>
+    </.stat>
+  </.statset>
   """
 end
 
-def handle_event("refresh", _, socket) do
+def handle_info(:refresh, socket) do
   socket = assign_stats(socket)
-  {:noreply, socket}
-end
-
-def handle_info(:tick, socket) do
-  socket = assign_stats(socket)
+  Process.send_after(self(), :refresh, 1000)
   {:noreply, socket}
 end
 
 defp assign_stats(socket) do
   assign(socket,
-    users: ${4:Context}.users(),
-    orders: ${4:Context}.orders(),
-    amount: ${4:Context}.amount()
+    users: ${1:Context}.users(),
+    orders: ${1:Context}.orders(),
+    amount: ${1:Context}.amount()
   )
 end
 ]]></content>

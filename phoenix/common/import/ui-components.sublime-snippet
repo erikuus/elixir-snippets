@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+import $TM_NAMESPACE_WEB.UiComponent
+]]></content>
+  <tabTrigger>.import-ui-component</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- import UiComponent</description>
+</snippet>

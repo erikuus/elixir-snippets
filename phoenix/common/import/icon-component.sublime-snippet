@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+import $TM_NAMESPACE_WEB.IconComponent
+]]></content>
+  <tabTrigger>.import-icon-component</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- import IconComponent</description>
+</snippet>

@@ -2,7 +2,7 @@
   <content><![CDATA[
 import Phoenix.LiveView.Helpers
 ]]></content>
-  <tabTrigger>.import-live-view-helpers</tabTrigger>
+  <tabTrigger>.import-phx-live-view-helpers</tabTrigger>
   <scope>source.elixir</scope>
   <description>- import Phoenix.LiveView.Helpers</description>
 </snippet>

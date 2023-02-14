@@ -1,8 +1,8 @@
 <snippet>
   <content><![CDATA[
-mix ecto.migrate
+mix ecto.migrate [--log-sql | --log-migrator-sql] 
 ]]></content>
-  <tabTrigger>mix ecto.migrate</tabTrigger>
+  <tabTrigger>mix ecto.migrate --log-sql</tabTrigger>
   <scope>text.plain</scope>
   <description>- Run generated migrations</description>
 </snippet>

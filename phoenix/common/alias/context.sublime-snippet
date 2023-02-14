@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+alias $TM_NAMESPACE.${1:Context}
+]]></content>
+  <tabTrigger>.alias-context</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- alias Context</description>
+</snippet>

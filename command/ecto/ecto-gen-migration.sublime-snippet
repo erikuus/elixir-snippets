@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+mix ecto.gen.migration create_test_table
+]]></content>
+  <tabTrigger>mix ecto.gen.migration create_test_table</tabTrigger>
+  <scope>text.plain</scope>
+  <description>- Create new migration</description>
+</snippet>
