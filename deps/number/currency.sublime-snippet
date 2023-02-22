@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-Number.Currency.number_to_currency(1234567890.50, unit: "€", separator: ",", delimiter: "", format: "%n %u")
+Number.Currency.number_to_currency(${1:1234567890.50}, unit: "€", separator: ",", delimiter: "", format: "%n %u")
 ]]></content>
   <tabTrigger>.number-to-currency</tabTrigger>
   <scope>source.elixir</scope>
