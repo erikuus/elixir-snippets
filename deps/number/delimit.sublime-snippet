@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+Number.Delimit.number_to_delimited(${1:12345678}, delimiter: "${2: }")
+]]></content>
+  <tabTrigger>.number-to-delimited</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Convert number to delimited</description>
+</snippet>
