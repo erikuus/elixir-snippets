@@ -2,7 +2,7 @@
   <content><![CDATA[
 temporary_assigns: [${1:items}: []]
 ]]></content>
-  <tabTrigger>.socket-temporary_assigns</tabTrigger>
+  <tabTrigger>.socket-temporary-assigns</tabTrigger>
   <scope>source.elixir</scope>
   <description>- Add temporary assigns to socket</description>
 </snippet>
