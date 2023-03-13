@@ -1,8 +1,0 @@
-<snippet>
-  <content><![CDATA[
-Routes.live_path(@socket, __MODULE__, ${1:param}: ${2:value})
-]]></content>
-  <tabTrigger>.routes-live-path</tabTrigger>
-  <scope>source.elixir</scope>
-  <description>- Get path to the live view</description>
-</snippet>

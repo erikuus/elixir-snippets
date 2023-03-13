@@ -1,8 +1,0 @@
-<snippet>
-  <content><![CDATA[
-Routes.${1:something}_path(@socket, :${2:action})
-]]></content>
-  <tabTrigger>.routes-live-path-action</tabTrigger>
-  <scope>source.elixir</scope>
-  <description>- Get path to the live view with action</description>
-</snippet>
