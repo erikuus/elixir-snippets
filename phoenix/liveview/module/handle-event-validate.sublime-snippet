@@ -5,7 +5,7 @@ def handle_event("${1:validate}", %{"${2:struct}" => params}, socket) do
   changeset =
     %${3:Schema}{}
     |> ${4:Context}.change_${2:struct}(params)
-    |> Map.put(:action, :insert)
+    |> Map.put(:action, :validate)
 
   socket = assign(socket, changeset: changeset)
 

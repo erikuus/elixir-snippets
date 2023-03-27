@@ -1,8 +1,0 @@
-<snippet>
-  <content><![CDATA[
-live_patch ${1:label}, to: ${2:}, class: ${3:}
-]]></content>
-  <tabTrigger>.live-patch</tabTrigger>
-  <scope>source.elixir</scope>
-  <description>- Display live link</description>
-</snippet>

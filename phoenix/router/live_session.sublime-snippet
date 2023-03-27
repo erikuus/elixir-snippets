@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+live_session ${1:name}, on_mount: $TM_NAMESPACE_WEB.${2:LiveView} do
+]]></content>
+  <tabTrigger>.live_session</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Defines a live session within a group of live routes</description>
+</snippet>

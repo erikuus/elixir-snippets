@@ -1,0 +1,12 @@
+<snippet>
+  <content><![CDATA[
+  attach_hook(socket, ${1:name}, ${2:stage}, fn ${3:}, socket ->
+    
+    {:cont, socket}
+  end)
+)
+]]></content>
+  <tabTrigger>.socket-attach-hook</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Attaches fun for the lifecycle stage into socket</description>
+</snippet>

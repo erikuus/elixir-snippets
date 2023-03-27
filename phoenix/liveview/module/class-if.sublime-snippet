@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+class={if ${1:item} == ${2:@selected_item}, do: "${3:bg-gray-50}"}
+]]></content>
+  <tabTrigger>.class-if</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Conditional class name</description>
+</snippet>
