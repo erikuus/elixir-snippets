@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+|> stream(:${1:key}, ${2:val})
+]]></content>
+  <tabTrigger>.socket-stream-pipe</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Stream mount socket (with pipeline)</description>
+</snippet>

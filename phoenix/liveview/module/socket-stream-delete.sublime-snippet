@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[
+socket = stream_delete(socket, :${1:key}, ${2:val}, at: ${3:0})
+]]></content>
+  <tabTrigger>.socket-stream-delete</tabTrigger>
+  <scope>source.elixir</scope>
+  <description>- Stream delete from socket</description>
+</snippet>
